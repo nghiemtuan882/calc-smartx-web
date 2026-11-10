@@ -118,7 +118,7 @@ function page(code) {
   const langOptions = CODES.map((c) => `<option value="${c}" data-href="${href(code, c)}"${c === code ? ' selected' : ''}>${esc(APP[c].name)}</option>`).join('');
   const langCards = CODES.map((c) => {
     const ve = calc(EX[c]);
-    return `<li><a href="${href(code, c)}" hreflang="${SITE_T[c].html}" lang="${SITE_T[c].html}" data-lang="${c}"${c === code ? ' aria-current="page"' : ''}><span class="flag" aria-hidden="true">${FLAGS[c]}</span><strong>${esc(APP[c].name)}</strong><span class="m">${esc(fmt(ve.each, APP[c].sep))}</span><small>${esc(APP[c].ex_each)}, ${esc(EX[c].cur)}</small></a></li>`;
+    return `<li><a href="${href(code, c)}" hreflang="${SITE_T[c].html}" lang="${SITE_T[c].html}" data-lang="${c}"${c === code ? ' aria-current="page"' : ''}><span class="flag" aria-hidden="true">${FLAGS[c]}</span><strong>${esc(APP[c].name)}</strong></a></li>`;
   }).join('');
   // Globe data: highlight countries by language
   const globeData = esc(JSON.stringify(Object.fromEntries(CODES.map(c => [c, LANG_COUNTRIES[c]]))));
@@ -343,9 +343,9 @@ ${code === DEFAULT ? `<script>try{var l=localStorage.getItem('csx-lang');if(l&&l
                   <div class="ds-bar-right"><span class="ds-icon"></span><span class="ds-icon"></span></div>
                 </div>
                 <div class="ds-sheet">
-                  <div class="ds-row"><span class="ds-t">150.000 × 3</span></div>
-                  <div class="ds-row"><span class="ds-t">495.000 + 10%</span></div>
-                  <div class="ds-row"><span class="ds-t sel">150.000 × 3 + 10%</span></div>
+                  <div class="ds-row">150.000 × 3</div>
+                  <div class="ds-row">495.000 + 10%</div>
+                  <div class="ds-row ds-row--cur">150.000 × 3 + 10%</div>
                 </div>
                 <div class="ds-expr">150.000 × 3 + 10% =</div>
                 <div class="ds-result">495.000</div>
@@ -370,10 +370,10 @@ ${code === DEFAULT ? `<script>try{var l=localStorage.getItem('csx-lang');if(l&&l
                   <div class="ds-bar-right"><span class="ds-icon"></span><span class="ds-icon"></span></div>
                 </div>
                 <div class="ds-sheet ds-sheet--wide">
-                  <div class="ds-row"><span class="ds-t">1.500.000 × 5</span></div>
-                  <div class="ds-row"><span class="ds-t">8.250.000 + 10%</span></div>
-                  <div class="ds-row"><span class="ds-t">8.250.000 ÷ 12</span></div>
-                  <div class="ds-row"><span class="ds-t sel">Tổng: 1.500.000 × 5 + …</span></div>
+                  <div class="ds-row">1.500.000 × 5</div>
+                  <div class="ds-row">8.250.000 + 10%</div>
+                  <div class="ds-row">8.250.000 ÷ 12</div>
+                  <div class="ds-row ds-row--cur">1.500.000 × 5 + 10%</div>
                 </div>
                 <div class="ds-expr">1.500.000 × 5 + 10% =</div>
                 <div class="ds-result">8.250.000</div>
