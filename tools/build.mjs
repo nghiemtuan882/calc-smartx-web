@@ -170,10 +170,15 @@ ${alternates}
 ${code === DEFAULT ? `<script>try{var l=localStorage.getItem('csx-lang');if(l&&l!=='${DEFAULT}'&&${JSON.stringify(CODES)}.indexOf(l)>0)location.replace(l+'/')}catch(e){}</script>` : ''}
 </head>
 <body>
+<div id="splash" aria-hidden="true">
+  <div class="splash__ring"><img src="${up}static/logo.svg" alt="Calc SmartX" width="72" height="72"></div>
+  <div class="splash__name">Calc SmartX</div>
+  <div class="splash__bar-wrap"><div class="splash__bar"></div></div>
+</div>
 <a class="skip" href="#main">${esc(T.skip)}</a>
 <header class="nav">
   <div class="container nav__in">
-    <a class="brand" href="${href(code, code)}"><img src="${up}static/logo.svg" alt="" width="30" height="30">Calc SmartX</a>
+    <a class="brand" href="${href(code, code)}"><img src="${up}static/logo.svg" alt="" width="40" height="40">Calc SmartX</a>
     <nav class="nav__links" aria-label="Calc SmartX">
       <a href="#features">${esc(T.nav_feat)}</a>
       <a href="#example">${esc(T.nav_ex)}</a>
@@ -268,22 +273,46 @@ ${code === DEFAULT ? `<script>try{var l=localStorage.getItem('csx-lang');if(l&&l
         <div class="theme-preview">
           <div class="theme-mockup" id="theme-mockup" data-active="light">
             <div class="tm-light">
-              <div class="tm-bar"><span class="tm-dot"></span><span class="tm-dot"></span><span class="tm-brand">Calc SmartX</span><span class="tm-dot"></span></div>
-              <div class="tm-sheet">
-                <div class="tm-row"><span class="tm-cell c1">150.000</span><span class="tm-op">×</span><span class="tm-cell c3 sel">3</span><span class="tm-op">=</span><span class="tm-cell c2">450.000</span></div>
-                <div class="tm-row"><span class="tm-cell c2">450.000</span><span class="tm-op">+</span><span class="tm-cell">10</span><span class="tm-op">%</span><span class="tm-op">=</span><span class="tm-cell c1">495.000</span></div>
-                <div class="tm-row"><span class="tm-cell c1">495.000</span><span class="tm-op">÷</span><span class="tm-cell">3</span><span class="tm-op">=</span><span class="tm-cell">165.000</span></div>
+              <div class="tm-bar">
+                <div class="tm-bar-left"><span class="tm-icon"></span><span class="tm-icon"></span><span class="tm-icon"></span></div>
+                <div class="tm-brand-pill"><span class="tm-spark">✦</span>Calc SmartX</div>
+                <div class="tm-bar-right"><span class="tm-icon"></span><span class="tm-icon"></span><span class="tm-icon"></span></div>
               </div>
-              <div class="tm-pad"><span class="tm-k tl">⌫</span><span class="tm-k">7</span><span class="tm-k">8</span><span class="tm-k">9</span><span class="tm-k op">÷</span><span class="tm-k">4</span><span class="tm-k">5</span><span class="tm-k">6</span><span class="tm-k op">×</span><span class="tm-k">1</span><span class="tm-k">2</span><span class="tm-k">3</span><span class="tm-k op">−</span><span class="tm-k">0</span><span class="tm-k">000</span><span class="tm-k tl">.</span><span class="tm-k op">=</span></div>
+              <div class="tm-sheet">
+                <div class="tm-row">150.000 × 3</div>
+                <div class="tm-row">495.000 + 10%</div>
+                <div class="tm-row tm-row-eq">150.000 × 3 + 10%</div>
+              </div>
+              <div class="tm-expr">150.000 × 3 + 10% =</div>
+              <div class="tm-result">495.000</div>
+              <div class="tm-pad">
+                <span class="tm-k tool">∨</span><span class="tm-k">7</span><span class="tm-k">8</span><span class="tm-k">9</span><span class="tm-k op">÷</span>
+                <span class="tm-k tool">(</span><span class="tm-k">4</span><span class="tm-k">5</span><span class="tm-k">6</span><span class="tm-k op">×</span>
+                <span class="tm-k tool">)</span><span class="tm-k">1</span><span class="tm-k">2</span><span class="tm-k">3</span><span class="tm-k op">−</span>
+                <span class="tm-k tool">%</span><span class="tm-k">0</span><span class="tm-k">,</span><span class="tm-k">±</span><span class="tm-k op">+</span>
+                <span class="tm-k tool">xʸ</span><span class="tm-k" style="grid-column:span 2">⌫</span><span class="tm-k" style="visibility:hidden"></span><span class="tm-k op">=</span>
+              </div>
             </div>
             <div class="tm-dark">
-              <div class="tm-bar"><span class="tm-dot"></span><span class="tm-dot"></span><span class="tm-brand">Calc SmartX</span><span class="tm-dot"></span></div>
-              <div class="tm-sheet">
-                <div class="tm-row"><span class="tm-cell c1">150.000</span><span class="tm-op">×</span><span class="tm-cell c3 sel">3</span><span class="tm-op">=</span><span class="tm-cell c2">450.000</span></div>
-                <div class="tm-row"><span class="tm-cell c2">450.000</span><span class="tm-op">+</span><span class="tm-cell">10</span><span class="tm-op">%</span><span class="tm-op">=</span><span class="tm-cell c1">495.000</span></div>
-                <div class="tm-row"><span class="tm-cell c1">495.000</span><span class="tm-op">÷</span><span class="tm-cell">3</span><span class="tm-op">=</span><span class="tm-cell">165.000</span></div>
+              <div class="tm-bar">
+                <div class="tm-bar-left"><span class="tm-icon"></span><span class="tm-icon"></span><span class="tm-icon"></span></div>
+                <div class="tm-brand-pill"><span class="tm-spark">✦</span>Calc SmartX</div>
+                <div class="tm-bar-right"><span class="tm-icon"></span><span class="tm-icon"></span><span class="tm-icon"></span></div>
               </div>
-              <div class="tm-pad"><span class="tm-k tl">⌫</span><span class="tm-k">7</span><span class="tm-k">8</span><span class="tm-k">9</span><span class="tm-k op">÷</span><span class="tm-k">4</span><span class="tm-k">5</span><span class="tm-k">6</span><span class="tm-k op">×</span><span class="tm-k">1</span><span class="tm-k">2</span><span class="tm-k">3</span><span class="tm-k op">−</span><span class="tm-k">0</span><span class="tm-k">000</span><span class="tm-k tl">.</span><span class="tm-k op">=</span></div>
+              <div class="tm-sheet">
+                <div class="tm-row">150.000 × 3</div>
+                <div class="tm-row">495.000 + 10%</div>
+                <div class="tm-row tm-row-eq">150.000 × 3 + 10%</div>
+              </div>
+              <div class="tm-expr">150.000 × 3 + 10% =</div>
+              <div class="tm-result">495.000</div>
+              <div class="tm-pad">
+                <span class="tm-k tool">∨</span><span class="tm-k">7</span><span class="tm-k">8</span><span class="tm-k">9</span><span class="tm-k op">÷</span>
+                <span class="tm-k tool">(</span><span class="tm-k">4</span><span class="tm-k">5</span><span class="tm-k">6</span><span class="tm-k op">×</span>
+                <span class="tm-k tool">)</span><span class="tm-k">1</span><span class="tm-k">2</span><span class="tm-k">3</span><span class="tm-k op">−</span>
+                <span class="tm-k tool">%</span><span class="tm-k">0</span><span class="tm-k">,</span><span class="tm-k">±</span><span class="tm-k op">+</span>
+                <span class="tm-k tool">xʸ</span><span class="tm-k" style="grid-column:span 2">⌫</span><span class="tm-k" style="visibility:hidden"></span><span class="tm-k op">=</span>
+              </div>
             </div>
           </div>
         </div>
@@ -300,7 +329,6 @@ ${code === DEFAULT ? `<script>try{var l=localStorage.getItem('csx-lang');if(l&&l
       <div class="device-tabs" role="tablist">
         <button class="dev-tab is-active" role="tab" aria-selected="true" data-device="phone">${esc(T.device_phone)}</button>
         <button class="dev-tab" role="tab" aria-selected="false" data-device="tablet">${esc(T.device_tablet)}</button>
-        <button class="dev-tab" role="tab" aria-selected="false" data-device="fold">${esc(T.device_fold)}</button>
       </div>
       <div class="device-stage" id="device-stage">
         <div class="dev-scene" data-active="phone">
@@ -309,50 +337,52 @@ ${code === DEFAULT ? `<script>try{var l=localStorage.getItem('csx-lang');if(l&&l
           <div class="dev-frame dev-phone" data-device="phone">
             <div class="dev-shell">
               <div class="dev-screen">
-                <div class="ds-bar"><span class="ds-brand">Calc SmartX</span></div>
-                <div class="ds-sheet">
-                  <div class="ds-row"><span class="ds-t c1">150.000</span><span class="ds-o">×</span><span class="ds-t c3 sel">3</span><span class="ds-o">=</span><span class="ds-t c2">450.000</span></div>
-                  <div class="ds-row"><span class="ds-t c2">450.000</span><span class="ds-o">+</span><span class="ds-t">10%</span><span class="ds-o">=</span><span class="ds-t c1">495.000</span></div>
-                  <div class="ds-row"><span class="ds-t c1">495.000</span><span class="ds-o">÷</span><span class="ds-t">3</span><span class="ds-o">=</span><span class="ds-t">165.000</span></div>
+                <div class="ds-bar">
+                  <div class="ds-bar-left"><span class="ds-icon"></span><span class="ds-icon"></span></div>
+                  <div class="ds-brand-pill"><span class="ds-spark">✦</span>Calc SmartX</div>
+                  <div class="ds-bar-right"><span class="ds-icon"></span><span class="ds-icon"></span></div>
                 </div>
-                <div class="ds-pad"><span class="ds-k tl">⌫</span><span class="ds-k">7</span><span class="ds-k">8</span><span class="ds-k">9</span><span class="ds-k op">÷</span><span class="ds-k">4</span><span class="ds-k">5</span><span class="ds-k">6</span><span class="ds-k op">×</span><span class="ds-k">1</span><span class="ds-k">2</span><span class="ds-k">3</span><span class="ds-k op">−</span><span class="ds-k">0</span><span class="ds-k">000</span><span class="ds-k tl">.</span><span class="ds-k op">=</span></div>
+                <div class="ds-sheet">
+                  <div class="ds-row"><span class="ds-t">150.000 × 3</span></div>
+                  <div class="ds-row"><span class="ds-t">495.000 + 10%</span></div>
+                  <div class="ds-row"><span class="ds-t sel">150.000 × 3 + 10%</span></div>
+                </div>
+                <div class="ds-expr">150.000 × 3 + 10% =</div>
+                <div class="ds-result">495.000</div>
+                <div class="ds-pad">
+                  <span class="ds-k tool">∨</span><span class="ds-k">7</span><span class="ds-k">8</span><span class="ds-k">9</span><span class="ds-k op">÷</span>
+                  <span class="ds-k tool">(</span><span class="ds-k">4</span><span class="ds-k">5</span><span class="ds-k">6</span><span class="ds-k op">×</span>
+                  <span class="ds-k tool">)</span><span class="ds-k">1</span><span class="ds-k">2</span><span class="ds-k">3</span><span class="ds-k op">−</span>
+                  <span class="ds-k tool">%</span><span class="ds-k">0</span><span class="ds-k">,</span><span class="ds-k">±</span><span class="ds-k op">+</span>
+                  <span class="ds-k tool">xʸ</span><span class="ds-k" style="grid-column:span 2">⌫</span><span class="ds-k" style="visibility:hidden"></span><span class="ds-k op">=</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Tablet -->
+          <!-- Tablet / Foldable -->
           <div class="dev-frame dev-tablet" data-device="tablet">
             <div class="dev-shell">
               <div class="dev-screen">
-                <div class="ds-bar"><span class="ds-brand">Calc SmartX</span></div>
+                <div class="ds-bar">
+                  <div class="ds-bar-left"><span class="ds-icon"></span><span class="ds-icon"></span></div>
+                  <div class="ds-brand-pill"><span class="ds-spark">✦</span>Calc SmartX</div>
+                  <div class="ds-bar-right"><span class="ds-icon"></span><span class="ds-icon"></span></div>
+                </div>
                 <div class="ds-sheet ds-sheet--wide">
-                  <div class="ds-row"><span class="ds-t c1">1.500.000</span><span class="ds-o">×</span><span class="ds-t c3 sel">5</span><span class="ds-o">=</span><span class="ds-t c2">7.500.000</span></div>
-                  <div class="ds-row"><span class="ds-t c2">7.500.000</span><span class="ds-o">+</span><span class="ds-t">10%</span><span class="ds-o">=</span><span class="ds-t c1">8.250.000</span></div>
-                  <div class="ds-row"><span class="ds-t c1">8.250.000</span><span class="ds-o">÷</span><span class="ds-t">12</span><span class="ds-o">=</span><span class="ds-t">687.500</span></div>
-                  <div class="ds-row"><span class="ds-t">50.000</span><span class="ds-o">×</span><span class="ds-t c3">5</span><span class="ds-o">=</span><span class="ds-t">250.000</span></div>
+                  <div class="ds-row"><span class="ds-t">1.500.000 × 5</span></div>
+                  <div class="ds-row"><span class="ds-t">8.250.000 + 10%</span></div>
+                  <div class="ds-row"><span class="ds-t">8.250.000 ÷ 12</span></div>
+                  <div class="ds-row"><span class="ds-t sel">Tổng: 1.500.000 × 5 + …</span></div>
                 </div>
-                <div class="ds-pad ds-pad--wide"><span class="ds-k tl">⌫</span><span class="ds-k">7</span><span class="ds-k">8</span><span class="ds-k">9</span><span class="ds-k op">÷</span><span class="ds-k">4</span><span class="ds-k">5</span><span class="ds-k">6</span><span class="ds-k op">×</span><span class="ds-k">1</span><span class="ds-k">2</span><span class="ds-k">3</span><span class="ds-k op">−</span><span class="ds-k">0</span><span class="ds-k">000</span><span class="ds-k tl">.</span><span class="ds-k op">=</span></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Foldable -->
-          <div class="dev-frame dev-fold" data-device="fold">
-            <div class="dev-fold-inner">
-              <div class="fold-half fold-half--left dev-shell">
-                <div class="dev-screen">
-                  <div class="ds-bar"><span class="ds-brand">Calc SmartX</span></div>
-                  <div class="ds-sheet">
-                    <div class="ds-row"><span class="ds-t c1">150.000</span><span class="ds-o">×</span><span class="ds-t c3 sel">3</span><span class="ds-o">=</span><span class="ds-t c2">450.000</span></div>
-                    <div class="ds-row"><span class="ds-t c2">450.000</span><span class="ds-o">+</span><span class="ds-t">10%</span><span class="ds-o">=</span><span class="ds-t c1">495.000</span></div>
-                    <div class="ds-row"><span class="ds-t c1">495.000</span><span class="ds-o">÷</span><span class="ds-t">3</span><span class="ds-o">=</span><span class="ds-t">165.000</span></div>
-                  </div>
-                </div>
-              </div>
-              <div class="fold-hinge"></div>
-              <div class="fold-half fold-half--right dev-shell">
-                <div class="dev-screen">
-                  <div class="ds-pad"><span class="ds-k tl">⌫</span><span class="ds-k">7</span><span class="ds-k">8</span><span class="ds-k">9</span><span class="ds-k op">÷</span><span class="ds-k">4</span><span class="ds-k">5</span><span class="ds-k">6</span><span class="ds-k op">×</span><span class="ds-k">1</span><span class="ds-k">2</span><span class="ds-k">3</span><span class="ds-k op">−</span><span class="ds-k">0</span><span class="ds-k">000</span><span class="ds-k tl">.</span><span class="ds-k op">=</span></div>
+                <div class="ds-expr">1.500.000 × 5 + 10% =</div>
+                <div class="ds-result">8.250.000</div>
+                <div class="ds-pad ds-pad--wide">
+                  <span class="ds-k tool">∨</span><span class="ds-k">7</span><span class="ds-k">8</span><span class="ds-k">9</span><span class="ds-k op">÷</span>
+                  <span class="ds-k tool">(</span><span class="ds-k">4</span><span class="ds-k">5</span><span class="ds-k">6</span><span class="ds-k op">×</span>
+                  <span class="ds-k tool">)</span><span class="ds-k">1</span><span class="ds-k">2</span><span class="ds-k">3</span><span class="ds-k op">−</span>
+                  <span class="ds-k tool">%</span><span class="ds-k">0</span><span class="ds-k">,</span><span class="ds-k">±</span><span class="ds-k op">+</span>
+                  <span class="ds-k tool">xʸ</span><span class="ds-k" style="grid-column:span 2">⌫</span><span class="ds-k" style="visibility:hidden"></span><span class="ds-k op">=</span>
                 </div>
               </div>
             </div>

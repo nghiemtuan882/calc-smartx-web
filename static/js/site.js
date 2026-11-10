@@ -2,6 +2,21 @@
 (() => {
   const root = document.documentElement;
   root.classList.remove('no-js');
+
+  /* ---------- Splash screen: show once per session ---------- */
+  const splash = document.getElementById('splash');
+  if (splash) {
+    const seen = (() => { try { return sessionStorage.getItem('csx-splash'); } catch(e) { return null; } })();
+    if (seen) {
+      splash.classList.add('splash--done');
+    } else {
+      // Hide after animation completes (~2.1s total)
+      setTimeout(() => {
+        splash.classList.add('splash--done');
+        try { sessionStorage.setItem('csx-splash', '1'); } catch(e) {}
+      }, 2100);
+    }
+  }
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------- language switch ---------- */
