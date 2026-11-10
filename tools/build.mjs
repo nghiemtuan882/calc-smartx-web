@@ -22,6 +22,20 @@ const GROUPS = [
   ['g4', ['f5', 'f8', 'f15']],
 ];
 
+// Emoji flags per language code
+const FLAGS = { vi: '🇻🇳', en: '🇺🇸', zh: '🇨🇳', ja: '🇯🇵', ko: '🇰🇷', es: '🇪🇸', pt: '🇧🇷', fr: '🇫🇷', de: '🇩🇪', ru: '🇷🇺', th: '🇹🇭', id: '🇮🇩' };
+
+// Countries per language (ISO 3166-1 alpha-3 for globe)
+const LANG_COUNTRIES = {
+  vi: ['VNM'], en: ['USA','GBR','AUS','CAN','NZL','IRL','ZAF','SGP','PHL'],
+  zh: ['CHN','TWN','HKG','MAC','SGP'], ja: ['JPN'], ko: ['KOR','PRK'],
+  es: ['MEX','COL','ARG','ESP','CHL','PER','VEN','ECU','BOL','PRY','URY','CRI','PAN','DOM','HND','SLV','NIC','GTM','CUB'],
+  pt: ['BRA','PRT','AGO','MOZ','CPV','STP','GNB','TLS'],
+  fr: ['FRA','BEL','CHE','CAN','SEN','CIV','CMR','MLI','MDG','GAB','COG'],
+  de: ['DEU','AUT','CHE','LUX','LIE'], ru: ['RUS','BLR','KAZ','KGZ','MDA'],
+  th: ['THA'], id: ['IDN'],
+};
+
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const fill = (s, v) => s.replace(/\{(\w+)\}/g, (_, k) => v[k] ?? '');
 const fmt = (v, sep) => {
@@ -104,8 +118,10 @@ function page(code) {
   const langOptions = CODES.map((c) => `<option value="${c}" data-href="${href(code, c)}"${c === code ? ' selected' : ''}>${esc(APP[c].name)}</option>`).join('');
   const langCards = CODES.map((c) => {
     const ve = calc(EX[c]);
-    return `<li><a href="${href(code, c)}" hreflang="${SITE_T[c].html}" lang="${SITE_T[c].html}" data-lang="${c}"${c === code ? ' aria-current="page"' : ''}><strong>${esc(APP[c].name)}</strong><span class="m">${esc(fmt(ve.each, APP[c].sep))}</span><small>${esc(APP[c].ex_each)}, ${esc(EX[c].cur)}</small></a></li>`;
+    return `<li><a href="${href(code, c)}" hreflang="${SITE_T[c].html}" lang="${SITE_T[c].html}" data-lang="${c}"${c === code ? ' aria-current="page"' : ''}><span class="flag" aria-hidden="true">${FLAGS[c]}</span><strong>${esc(APP[c].name)}</strong><span class="m">${esc(fmt(ve.each, APP[c].sep))}</span><small>${esc(APP[c].ex_each)}, ${esc(EX[c].cur)}</small></a></li>`;
   }).join('');
+  // Globe data: highlight countries by language
+  const globeData = esc(JSON.stringify(Object.fromEntries(CODES.map(c => [c, LANG_COUNTRIES[c]]))));
 
   let n = 0;
   const groups = GROUPS.map(([g, ids]) => `
@@ -164,7 +180,7 @@ ${code === DEFAULT ? `<script>try{var l=localStorage.getItem('csx-lang');if(l&&l
       <a href="#languages">${esc(T.nav_lang)}</a>
     </nav>
     <div class="nav__end">
-      <label class="langsel"><span class="visually-hidden">${esc(T.lang)}</span><select id="langsel">${langOptions}</select>${ICON.chev}</label>
+      <label class="langsel"><span class="langsel__lbl">${esc(T.lang)}</span><span class="langsel__flag" aria-hidden="true">${FLAGS[code]}</span><select id="langsel">${langOptions}</select>${ICON.chev}</label>
       <a class="key key--primary key--sm nav__cta" href="${play}" rel="noopener">${esc(T.cta)}</a>
     </div>
   </div>
@@ -225,10 +241,45 @@ ${code === DEFAULT ? `<script>try{var l=localStorage.getItem('csx-lang');if(l&&l
   <section class="sec" id="languages" aria-labelledby="h-lang">
     <div class="container">
       <div class="sec__head">
-        <h2 id="h-lang">${esc(T.lang_h)}</h2>
-        <p class="lead">${esc(T.lang_p)}</p>
+        <h2 id="h-lang">${esc(T.globe_h)}</h2>
+        <p class="lead">${esc(T.globe_p)}</p>
+      </div>
+      <div class="globe-wrap" aria-hidden="true">
+        <canvas id="globe" class="globe-canvas" data-countries="${globeData}" data-active="${code}"></canvas>
+        <div class="globe-labels" id="globe-labels"></div>
       </div>
       <ul class="langs">${langCards}</ul>
+    </div>
+  </section>
+
+  <section class="sec faq-sec" id="faq" aria-labelledby="h-faq">
+    <div class="container">
+      <div class="sec__head">
+        <h2 id="h-faq">${esc(T.faq_h)}</h2>
+      </div>
+      <dl class="faq">${[1,2,3,4,5].map(i => `
+        <div class="faq__item">
+          <dt><button class="faq__q" aria-expanded="false">${esc(T['faq_'+i+'q'])}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></dt>
+          <dd class="faq__a" hidden>${esc(T['faq_'+i+'a'])}</dd>
+        </div>`).join('')}
+      </dl>
+    </div>
+  </section>
+
+  <section class="soon-sec" id="soon" aria-labelledby="h-soon">
+    <div class="container">
+      <div class="soon__panel">
+        <div class="soon__icon"><img src="${up}static/logo.svg" alt="" width="72" height="72"></div>
+        <div class="soon__body">
+          <h2 id="h-soon">${esc(T.soon_h)}</h2>
+          <p>${esc(T.soon_p)}</p>
+          <form class="soon__form" action="https://formspree.io/f/xvgrzojn" method="POST" novalidate>
+            <input type="email" name="email" required placeholder="your@email.com" autocomplete="email">
+            <button type="submit" class="key key--primary">${esc(T.soon_btn)}</button>
+          </form>
+          <p class="soon__note">${esc(T.soon_note)}</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -257,6 +308,8 @@ ${code === DEFAULT ? `<script>try{var l=localStorage.getItem('csx-lang');if(l&&l
     </div>
   </div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+<script src="${up}static/js/globe.js" defer></script>
 <script src="${up}static/js/site.js" defer></script>
 </body>
 </html>

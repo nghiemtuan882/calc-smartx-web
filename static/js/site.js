@@ -59,6 +59,16 @@
     calc();
   }
 
+  /* ---------- FAQ accordion ---------- */
+  document.querySelectorAll('.faq__q').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      const dd = btn.closest('.faq__item').querySelector('.faq__a');
+      if (dd) dd.hidden = expanded;
+    });
+  });
+
   /* ---------- ASCII field: digits drift in raw on the left, settle into sheet rows on the right ---------- */
   const cv = document.querySelector('canvas.field');
   if (cv && cv.getContext) {
