@@ -53,9 +53,12 @@
       const amount = d.price * qty, vat = amount * (1 + d.vat / 100), each = vat / d.parts, total = d.fee * qty;
       set('qty', qty); set('amount', amount); set('vat', vat); set('each', each); set('total', total);
     };
+    // like the app: the quantity is a plain linked number until you start typing, then it is selected (green)
+    const qtyTok = sheet.querySelector('.ln [data-v="qty"]');
     const press = (k) => {
+      if (qtyTok) qtyTok.parentElement.classList.add('sel');
       if (k === 'bs') { digits = fresh ? '' : digits.slice(0, -1); fresh = false; }
-      else if (k === 'clear') { digits = String(d.qty); fresh = true; }
+      else if (k === 'clear') { digits = String(d.qty); fresh = true; if (qtyTok) qtyTok.parentElement.classList.remove('sel'); }
       else {
         const base = fresh ? '' : digits;
         const next = (base === '0' ? '' : base) + k;
@@ -93,16 +96,23 @@
       tab.setAttribute('aria-selected', 'true');
       if (devScene) {
         devScene.dataset.active = tab.dataset.device;
-        // trigger fold animation
-        const fold = devScene.querySelector('.dev-fold');
+        // foldable: show it closed (cover screen), then unfold to the inner screen
+        const fold = document.getElementById('fold');
         if (fold && tab.dataset.device === 'fold') {
-          fold.classList.remove('fold-animate');
+          clearTimeout(fold._t);
+          fold.style.transition = 'none'; fold.querySelector('.fold__flap').style.transition = 'none';
+          fold.classList.add('is-closed');
           void fold.offsetWidth;
-          fold.classList.add('fold-animate');
+          fold.style.transition = ''; fold.querySelector('.fold__flap').style.transition = '';
+          fold._t = setTimeout(() => fold.classList.remove('is-closed'), 700);
         }
       }
     });
   });
+
+  // tap the foldable to fold / unfold it again
+  const foldEl = document.getElementById('fold');
+  if (foldEl) foldEl.addEventListener('click', () => { clearTimeout(foldEl._t); foldEl.classList.toggle('is-closed'); });
 
   /* ---------- FAQ accordion ---------- */
   document.querySelectorAll('.faq__q').forEach((btn) => {

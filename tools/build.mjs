@@ -61,6 +61,7 @@ const APPICON = {
   exp: sv('<path d="M12 3v12"/><path d="m7.5 7.5 4.5-4.5 4.5 4.5"/><path d="M5 12v6.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V12"/>'),
   shot: sv('<path d="M4 8.5A1.5 1.5 0 0 1 5.5 7h2l1.5-2h6l1.5 2h2A1.5 1.5 0 0 1 20 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 17.5z"/><circle cx="12" cy="13" r="3.5"/>'),
   set: sv('<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/>'),
+  heart: sv('<path d="M12 20s-7.5-4.6-9.2-9.4C1.7 7.4 3.8 4 7.2 4c2 0 3.5 1.1 4.8 2.8C13.3 5.1 14.8 4 16.8 4c3.4 0 5.5 3.4 4.4 6.6C19.5 15.4 12 20 12 20z"/>', ' class="heart"'),
   hide: sv('<path d="m6 9 6 6 6-6"/>'),
   note: sv('<path d="M9 4h6a1 1 0 0 1 1 1v1H8V5a1 1 0 0 1 1-1z"/><path d="M16 5h1.5A1.5 1.5 0 0 1 19 6.5V11M8 5H6.5A1.5 1.5 0 0 0 5 6.5v12A1.5 1.5 0 0 0 6.5 20H11"/><path d="m14 20 .5-2.5 5-5 2 2-5 5z"/>'),
   trash: sv('<path d="M4 7h16"/><path d="M10 11v6M14 11v6"/><path d="M5.5 7l1 12a1.5 1.5 0 0 0 1.5 1.4h8a1.5 1.5 0 0 0 1.5-1.4l1-12"/><path d="M9 7V4.5h6V7"/>'),
@@ -91,7 +92,7 @@ function page(code) {
   };
   const op = (s) => tk(s, { op: true });
   const lines = [
-    [tk(F(e.price), { label: A.ex_price }), op('×'), tk(F(v.qty), { label: A.ex_qty, key: 'qty', c: 3, box: true, sel: true }), op('='), tk(F(v.amount), { label: A.ex_amount, key: 'amount', c: 1, box: true })],
+    [tk(F(e.price), { label: A.ex_price }), op('×'), tk(F(v.qty), { label: A.ex_qty, key: 'qty', c: 3, box: true }), op('='), tk(F(v.amount), { label: A.ex_amount, key: 'amount', c: 1, box: true })],
     [tk(F(v.amount), { label: A.ex_amount, key: 'amount', c: 1 }), op('+'), tk(F(e.vat)), op('%'), op('='), tk(F(v.vat), { label: A.ex_vat, key: 'vat', c: 2, box: true })],
     [tk(F(v.vat), { label: A.ex_vat, key: 'vat', c: 2 }), op('÷'), tk(F(e.parts), { label: A.ex_parts }), op('='), tk(F(v.each), { label: A.ex_each, key: 'each' })],
     [tk(F(e.fee), { label: A.ex_fee }), op('×'), tk(F(v.qty), { label: A.ex_qty, key: 'qty', c: 3 }), op('='), tk(F(v.total), { label: A.ex_total, key: 'total' })],
@@ -178,7 +179,7 @@ ${code === DEFAULT ? `<script>try{var l=localStorage.getItem('csx-lang');if(l&&l
 <a class="skip" href="#main">${esc(T.skip)}</a>
 <header class="nav">
   <div class="container nav__in">
-    <a class="brand" href="${href(code, code)}"><img src="${up}static/logo.svg" alt="" width="40" height="40">Calc SmartX</a>
+    <a class="brand" href="${href(code, code)}"><img src="${up}static/logo.svg" alt="" width="52" height="52">Calc SmartX</a>
     <nav class="nav__links" aria-label="Calc SmartX">
       <a href="#features">${esc(T.nav_feat)}</a>
       <a href="#example">${esc(T.nav_ex)}</a>
@@ -204,7 +205,7 @@ ${code === DEFAULT ? `<script>try{var l=localStorage.getItem('csx-lang');if(l&&l
         <p class="try" id="try">${esc(T.try)}</p>
         <div class="phone" id="sheet" data-ex="${exData}" role="group" aria-labelledby="try">
           <div class="ph__top" aria-hidden="true">
-            <span class="ph__ic">${APPICON.undo}${APPICON.redo}</span>
+            <span class="ph__ic">${APPICON.undo}${APPICON.redo}${APPICON.heart}</span>
             <span class="ph__brand">${APPICON.spark}Calc SmartX</span>
             <span class="ph__ic">${APPICON.exp}${APPICON.shot}${APPICON.set}</span>
           </div>
@@ -272,48 +273,8 @@ ${code === DEFAULT ? `<script>try{var l=localStorage.getItem('csx-lang');if(l&&l
         </div>
         <div class="theme-preview">
           <div class="theme-mockup" id="theme-mockup" data-active="light">
-            <div class="tm-light">
-              <div class="tm-bar">
-                <div class="tm-bar-left"><span class="tm-icon"></span><span class="tm-icon"></span><span class="tm-icon"></span></div>
-                <div class="tm-brand-pill"><span class="tm-spark">✦</span>Calc SmartX</div>
-                <div class="tm-bar-right"><span class="tm-icon"></span><span class="tm-icon"></span><span class="tm-icon"></span></div>
-              </div>
-              <div class="tm-sheet">
-                <div class="tm-row">150.000 × 3</div>
-                <div class="tm-row">495.000 + 10%</div>
-                <div class="tm-row tm-row-eq">150.000 × 3 + 10%</div>
-              </div>
-              <div class="tm-expr">150.000 × 3 + 10% =</div>
-              <div class="tm-result">495.000</div>
-              <div class="tm-pad">
-                <span class="tm-k tool">∨</span><span class="tm-k">7</span><span class="tm-k">8</span><span class="tm-k">9</span><span class="tm-k op">÷</span>
-                <span class="tm-k tool">(</span><span class="tm-k">4</span><span class="tm-k">5</span><span class="tm-k">6</span><span class="tm-k op">×</span>
-                <span class="tm-k tool">)</span><span class="tm-k">1</span><span class="tm-k">2</span><span class="tm-k">3</span><span class="tm-k op">−</span>
-                <span class="tm-k tool">%</span><span class="tm-k">0</span><span class="tm-k">,</span><span class="tm-k">±</span><span class="tm-k op">+</span>
-                <span class="tm-k tool">xʸ</span><span class="tm-k" style="grid-column:span 2">⌫</span><span class="tm-k" style="visibility:hidden"></span><span class="tm-k op">=</span>
-              </div>
-            </div>
-            <div class="tm-dark">
-              <div class="tm-bar">
-                <div class="tm-bar-left"><span class="tm-icon"></span><span class="tm-icon"></span><span class="tm-icon"></span></div>
-                <div class="tm-brand-pill"><span class="tm-spark">✦</span>Calc SmartX</div>
-                <div class="tm-bar-right"><span class="tm-icon"></span><span class="tm-icon"></span><span class="tm-icon"></span></div>
-              </div>
-              <div class="tm-sheet">
-                <div class="tm-row">150.000 × 3</div>
-                <div class="tm-row">495.000 + 10%</div>
-                <div class="tm-row tm-row-eq">150.000 × 3 + 10%</div>
-              </div>
-              <div class="tm-expr">150.000 × 3 + 10% =</div>
-              <div class="tm-result">495.000</div>
-              <div class="tm-pad">
-                <span class="tm-k tool">∨</span><span class="tm-k">7</span><span class="tm-k">8</span><span class="tm-k">9</span><span class="tm-k op">÷</span>
-                <span class="tm-k tool">(</span><span class="tm-k">4</span><span class="tm-k">5</span><span class="tm-k">6</span><span class="tm-k op">×</span>
-                <span class="tm-k tool">)</span><span class="tm-k">1</span><span class="tm-k">2</span><span class="tm-k">3</span><span class="tm-k op">−</span>
-                <span class="tm-k tool">%</span><span class="tm-k">0</span><span class="tm-k">,</span><span class="tm-k">±</span><span class="tm-k op">+</span>
-                <span class="tm-k tool">xʸ</span><span class="tm-k" style="grid-column:span 2">⌫</span><span class="tm-k" style="visibility:hidden"></span><span class="tm-k op">=</span>
-              </div>
-            </div>
+            <img class="tm-light" src="${up}static/shots/ui/${code}-light.webp" width="780" height="1600" loading="lazy" decoding="async" alt="${esc(T.theme_light)} – Calc SmartX">
+            <img class="tm-dark" src="${up}static/shots/ui/${code}-dark.webp" width="780" height="1600" loading="lazy" decoding="async" alt="${esc(T.theme_dark)} – Calc SmartX">
           </div>
         </div>
       </div>
@@ -328,66 +289,26 @@ ${code === DEFAULT ? `<script>try{var l=localStorage.getItem('csx-lang');if(l&&l
       </div>
       <div class="device-tabs" role="tablist">
         <button class="dev-tab is-active" role="tab" aria-selected="true" data-device="phone">${esc(T.device_phone)}</button>
+        <button class="dev-tab" role="tab" aria-selected="false" data-device="fold">${esc(T.device_fold)}</button>
         <button class="dev-tab" role="tab" aria-selected="false" data-device="tablet">${esc(T.device_tablet)}</button>
       </div>
       <div class="device-stage" id="device-stage">
         <div class="dev-scene" data-active="phone">
-
-          <!-- Phone -->
           <div class="dev-frame dev-phone" data-device="phone">
-            <div class="dev-shell">
-              <div class="dev-screen">
-                <div class="ds-bar">
-                  <div class="ds-bar-left"><span class="ds-icon"></span><span class="ds-icon"></span></div>
-                  <div class="ds-brand-pill"><span class="ds-spark">✦</span>Calc SmartX</div>
-                  <div class="ds-bar-right"><span class="ds-icon"></span><span class="ds-icon"></span></div>
-                </div>
-                <div class="ds-sheet">
-                  <div class="ds-row">150.000 × 3</div>
-                  <div class="ds-row">495.000 + 10%</div>
-                  <div class="ds-row ds-row--cur">150.000 × 3 + 10%</div>
-                </div>
-                <div class="ds-expr">150.000 × 3 + 10% =</div>
-                <div class="ds-result">495.000</div>
-                <div class="ds-pad">
-                  <span class="ds-k tool">∨</span><span class="ds-k">7</span><span class="ds-k">8</span><span class="ds-k">9</span><span class="ds-k op">÷</span>
-                  <span class="ds-k tool">(</span><span class="ds-k">4</span><span class="ds-k">5</span><span class="ds-k">6</span><span class="ds-k op">×</span>
-                  <span class="ds-k tool">)</span><span class="ds-k">1</span><span class="ds-k">2</span><span class="ds-k">3</span><span class="ds-k op">−</span>
-                  <span class="ds-k tool">%</span><span class="ds-k">0</span><span class="ds-k">,</span><span class="ds-k">±</span><span class="ds-k op">+</span>
-                  <span class="ds-k tool">xʸ</span><span class="ds-k" style="grid-column:span 2">⌫</span><span class="ds-k" style="visibility:hidden"></span><span class="ds-k op">=</span>
-                </div>
+            <div class="dev-shell"><img class="dev-img" src="${up}static/shots/ui/${code}-light.webp" width="780" height="1600" loading="lazy" decoding="async" alt="${esc(T.device_phone)} – Calc SmartX"></div>
+          </div>
+          <div class="dev-frame dev-fold" data-device="fold">
+            <div class="fold" id="fold">
+              <div class="fold__half fold__right"><img src="${up}static/shots/ui/${code}-fold-open.webp" width="1500" height="1664" loading="lazy" decoding="async" alt="${esc(T.device_fold)} – Calc SmartX"></div>
+              <div class="fold__flap">
+                <div class="fold__face fold__front"><img src="${up}static/shots/ui/${code}-fold-open.webp" width="1500" height="1664" loading="lazy" decoding="async" alt=""></div>
+                <div class="fold__face fold__back"><img src="${up}static/shots/ui/${code}-fold-cover.webp" width="824" height="1920" loading="lazy" decoding="async" alt=""></div>
               </div>
             </div>
           </div>
-
-          <!-- Tablet / Foldable -->
           <div class="dev-frame dev-tablet" data-device="tablet">
-            <div class="dev-shell">
-              <div class="dev-screen">
-                <div class="ds-bar">
-                  <div class="ds-bar-left"><span class="ds-icon"></span><span class="ds-icon"></span></div>
-                  <div class="ds-brand-pill"><span class="ds-spark">✦</span>Calc SmartX</div>
-                  <div class="ds-bar-right"><span class="ds-icon"></span><span class="ds-icon"></span></div>
-                </div>
-                <div class="ds-sheet ds-sheet--wide">
-                  <div class="ds-row">1.500.000 × 5</div>
-                  <div class="ds-row">8.250.000 + 10%</div>
-                  <div class="ds-row">8.250.000 ÷ 12</div>
-                  <div class="ds-row ds-row--cur">1.500.000 × 5 + 10%</div>
-                </div>
-                <div class="ds-expr">1.500.000 × 5 + 10% =</div>
-                <div class="ds-result">8.250.000</div>
-                <div class="ds-pad ds-pad--wide">
-                  <span class="ds-k tool">∨</span><span class="ds-k">7</span><span class="ds-k">8</span><span class="ds-k">9</span><span class="ds-k op">÷</span>
-                  <span class="ds-k tool">(</span><span class="ds-k">4</span><span class="ds-k">5</span><span class="ds-k">6</span><span class="ds-k op">×</span>
-                  <span class="ds-k tool">)</span><span class="ds-k">1</span><span class="ds-k">2</span><span class="ds-k">3</span><span class="ds-k op">−</span>
-                  <span class="ds-k tool">%</span><span class="ds-k">0</span><span class="ds-k">,</span><span class="ds-k">±</span><span class="ds-k op">+</span>
-                  <span class="ds-k tool">xʸ</span><span class="ds-k" style="grid-column:span 2">⌫</span><span class="ds-k" style="visibility:hidden"></span><span class="ds-k op">=</span>
-                </div>
-              </div>
-            </div>
+            <div class="dev-shell"><img class="dev-img" src="${up}static/shots/ui/${code}-tablet.webp" width="1707" height="1068" loading="lazy" decoding="async" alt="${esc(T.device_tablet)} – Calc SmartX"></div>
           </div>
-
         </div>
       </div>
     </div>
@@ -486,6 +407,8 @@ for (const c of CODES) {
     if (!fs.existsSync(path.join(ROOT, 'static/gif', `${c}-${id}.gif`))) missing.push(`gif ${c}-${id}`);
   }
   if (!fs.existsSync(path.join(ROOT, 'static/shots', `${c}.webp`))) missing.push(`shot ${c}`);
+  for (const n of ['light', 'dark', 'fold-cover', 'fold-open', 'tablet'])
+    if (!fs.existsSync(path.join(ROOT, 'static/shots/ui', `${c}-${n}.webp`))) missing.push(`ui shot ${c}-${n}`);
 }
 console.log(`built ${CODES.length} pages into dist/` + (missing.length ? `\nmissing (${missing.length}): ${missing.slice(0, 12).join(', ')}${missing.length > 12 ? ' …' : ''}` : ' – nothing missing'));
 if (missing.length && process.env.CI) process.exit(1);

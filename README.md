@@ -21,6 +21,7 @@ Nếu thiếu chữ hoặc thiếu GIF của một ngôn ngữ, bước build b�
 | `tools/examples.json` | Bảng tính ví dụ cho từng ngôn ngữ (đơn giá, thuế, số đợt, tiền tệ) |
 | `static/gif/<ngôn ngữ>-<tính năng>.gif` | 180 GIF (15 tính năng × 12 ngôn ngữ), quay từ hoạt cảnh có sẵn trong app |
 | `static/shots/<ngôn ngữ>.webp` | Ảnh chụp app thật với bảng ví dụ của ngôn ngữ đó |
+| `static/shots/ui/<ngôn ngữ>-<kiểu>.webp` | Ảnh app thật cho mục "Giao diện sáng và tối" và "Dùng tốt trên mọi thiết bị": `light`, `dark` (điện thoại), `fold-cover`, `fold-open` (điện thoại gập cỡ Galaxy Z Fold8 Ultra), `tablet` |
 | `static/css/` | `tokens.css`, `base.css` (Hallmark Cobalt) và `site.css` |
 | `static/js/site.js` | Bảng tính chạy thử ở đầu trang, nền ký tự, chọn ngôn ngữ |
 | `tools/build.mjs` | Tạo trang, sitemap, hreflang |
@@ -37,6 +38,7 @@ Cần Node 18+, Google Chrome, Playwright và ffmpeg trên máy. File `index.htm
 ```bash
 node tools/shoot.mjs  /đường/dẫn/index.html   # ảnh chụp bảng ví dụ, 12 ngôn ngữ
 node tools/record.mjs /đường/dẫn/index.html   # 180 GIF tính năng
+NODE_PATH=$(npm root -g) node tools/shoot-ui.mjs /đường/dẫn/index.html   # 60 ảnh sáng/tối/gập/máy tính bảng
 ```
 
 Xem trước trên máy: `node tools/build.mjs` rồi mở `dist/index.html`.
