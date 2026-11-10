@@ -59,6 +59,36 @@
     calc();
   }
 
+  /* ---------- Dark/light theme toggle ---------- */
+  const themeMockup = document.getElementById('theme-mockup');
+  document.querySelectorAll('.theme-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      if (themeMockup) themeMockup.dataset.active = btn.dataset.theme;
+    });
+  });
+
+  /* ---------- Device tabs ---------- */
+  const devScene = document.querySelector('.dev-scene');
+  document.querySelectorAll('.dev-tab').forEach((tab) => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.dev-tab').forEach(t => { t.classList.remove('is-active'); t.setAttribute('aria-selected', 'false'); });
+      tab.classList.add('is-active');
+      tab.setAttribute('aria-selected', 'true');
+      if (devScene) {
+        devScene.dataset.active = tab.dataset.device;
+        // trigger fold animation
+        const fold = devScene.querySelector('.dev-fold');
+        if (fold && tab.dataset.device === 'fold') {
+          fold.classList.remove('fold-animate');
+          void fold.offsetWidth;
+          fold.classList.add('fold-animate');
+        }
+      }
+    });
+  });
+
   /* ---------- FAQ accordion ---------- */
   document.querySelectorAll('.faq__q').forEach((btn) => {
     btn.addEventListener('click', () => {

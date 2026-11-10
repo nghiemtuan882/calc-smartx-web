@@ -42,7 +42,16 @@
     "soon_h": "Sắp ra mắt",
     "soon_p": "Calc SmartX đang trong giai đoạn hoàn thiện. Đăng ký để nhận thông báo khi app lên Google Play.",
     "soon_btn": "Nhận thông báo",
-    "soon_note": "Chúng tôi chỉ gửi một email khi app ra mắt. Không spam."
+    "soon_note": "Chúng tôi chỉ gửi một email khi app ra mắt. Không spam.",
+    "theme_h": "Giao diện sáng và tối",
+    "theme_p": "Chuyển giữa giao diện sáng và tối ngay trong ứng dụng. Mắt dễ chịu dù bạn đang ở đâu.",
+    "theme_light": "Sáng",
+    "theme_dark": "Tối",
+    "device_h": "Dùng tốt trên mọi thiết bị",
+    "device_p": "Giao diện tự điều chỉnh theo kích thước màn hình — điện thoại, máy tính bảng hay điện thoại gập.",
+    "device_phone": "Điện thoại",
+    "device_tablet": "Máy tính bảng",
+    "device_fold": "Điện thoại gập"
   },
   "en": {
     "html": "en",
@@ -87,7 +96,16 @@
     "soon_h": "Coming soon",
     "soon_p": "Calc SmartX is in final development. Sign up to be notified when it launches on Google Play.",
     "soon_btn": "Notify me",
-    "soon_note": "We send one email when the app launches. No spam."
+    "soon_note": "We send one email when the app launches. No spam.",
+    "theme_h": "Light and dark mode",
+    "theme_p": "Switch between light and dark themes inside the app. Easy on the eyes wherever you are.",
+    "theme_light": "Light",
+    "theme_dark": "Dark",
+    "device_h": "Works great on every device",
+    "device_p": "The interface adapts to your screen — phone, tablet, or foldable.",
+    "device_phone": "Phone",
+    "device_tablet": "Tablet",
+    "device_fold": "Foldable"
   },
   "zh": {
     "html": "zh-Hans",
@@ -132,7 +150,16 @@
     "soon_h": "即将上线",
     "soon_p": "Calc SmartX 正处于最终开发阶段。注册以在上架 Google Play 时第一时间收到通知。",
     "soon_btn": "接收通知",
-    "soon_note": "我们只会在 App 上线时发送一封邮件，不会发送垃圾邮件。"
+    "soon_note": "我们只会在 App 上线时发送一封邮件，不会发送垃圾邮件。",
+    "theme_h": "浅色与深色模式",
+    "theme_p": "在应用内随时切换浅色与深色主题，无论身处何处都护眼舒适。",
+    "theme_light": "浅色",
+    "theme_dark": "深色",
+    "device_h": "适配所有设备",
+    "device_p": "界面自动适应屏幕大小——手机、平板或折叠屏均可流畅使用。",
+    "device_phone": "手机",
+    "device_tablet": "平板",
+    "device_fold": "折叠屏"
   },
   "ja": {
     "html": "ja",
@@ -177,7 +204,16 @@
     "soon_h": "もうすぐリリース",
     "soon_p": "Calc SmartX は最終開発段階です。Google Play でのリリース時に通知を受け取るには登録してください。",
     "soon_btn": "通知を受け取る",
-    "soon_note": "リリース時に1通のみメールをお送りします。スパムはありません。"
+    "soon_note": "リリース時に1通のみメールをお送りします。スパムはありません。",
+    "theme_h": "ライト・ダークモード",
+    "theme_p": "アプリ内でライトとダークを切り替えられます。場所を選ばず目に優しい表示を。",
+    "theme_light": "ライト",
+    "theme_dark": "ダーク",
+    "device_h": "どのデバイスでも快適に",
+    "device_p": "スマートフォン、タブレット、折りたたみスマートフォンに最適化されたインターフェース。",
+    "device_phone": "スマートフォン",
+    "device_tablet": "タブレット",
+    "device_fold": "折りたたみ"
   },
   "ko": {
     "html": "ko",
@@ -222,7 +258,16 @@
     "soon_h": "출시 예정",
     "soon_p": "Calc SmartX는 최종 개발 단계에 있습니다. Google Play 출시 시 알림을 받으려면 등록하세요.",
     "soon_btn": "알림 받기",
-    "soon_note": "출시 때 이메일 한 통만 발송합니다. 스팸은 없습니다."
+    "soon_note": "출시 때 이메일 한 통만 발송합니다. 스팸은 없습니다.",
+    "theme_h": "라이트 & 다크 모드",
+    "theme_p": "앱 안에서 라이트와 다크 테마를 바로 전환할 수 있어요. 어디서든 눈이 편안합니다.",
+    "theme_light": "라이트",
+    "theme_dark": "다크",
+    "device_h": "모든 기기에서 완벽하게",
+    "device_p": "화면 크기에 맞게 인터페이스가 자동 조정됩니다 — 스마트폰, 태블릿, 폴더블 모두 지원.",
+    "device_phone": "스마트폰",
+    "device_tablet": "태블릿",
+    "device_fold": "폴더블"
   },
   "es": {
     "html": "es",
@@ -267,7 +312,16 @@
     "soon_h": "Próximamente",
     "soon_p": "Calc SmartX está en su etapa final de desarrollo. Regístrate para recibir una notificación cuando llegue a Google Play.",
     "soon_btn": "Avisarme",
-    "soon_note": "Solo enviamos un correo cuando la app se lance. Sin spam."
+    "soon_note": "Solo enviamos un correo cuando la app se lance. Sin spam.",
+    "theme_h": "Modo claro y oscuro",
+    "theme_p": "Cambia entre los temas claro y oscuro dentro de la app. Cómodo para los ojos en cualquier lugar.",
+    "theme_light": "Claro",
+    "theme_dark": "Oscuro",
+    "device_h": "Funciona bien en cualquier dispositivo",
+    "device_p": "La interfaz se adapta a tu pantalla — teléfono, tableta o plegable.",
+    "device_phone": "Teléfono",
+    "device_tablet": "Tableta",
+    "device_fold": "Plegable"
   },
   "pt": {
     "html": "pt",
@@ -312,7 +366,16 @@
     "soon_h": "Em breve",
     "soon_p": "O Calc SmartX está na fase final de desenvolvimento. Cadastre-se para ser avisado quando chegar ao Google Play.",
     "soon_btn": "Me avise",
-    "soon_note": "Enviamos apenas um e-mail no lançamento. Sem spam."
+    "soon_note": "Enviamos apenas um e-mail no lançamento. Sem spam.",
+    "theme_h": "Modo claro e escuro",
+    "theme_p": "Alterne entre os temas claro e escuro dentro do app. Confortável para os olhos em qualquer lugar.",
+    "theme_light": "Claro",
+    "theme_dark": "Escuro",
+    "device_h": "Funciona bem em qualquer dispositivo",
+    "device_p": "A interface se adapta à sua tela — celular, tablet ou dobrável.",
+    "device_phone": "Celular",
+    "device_tablet": "Tablet",
+    "device_fold": "Dobrável"
   },
   "fr": {
     "html": "fr",
@@ -357,7 +420,16 @@
     "soon_h": "Bientôt disponible",
     "soon_p": "Calc SmartX est en phase finale de développement. Inscrivez-vous pour être averti dès sa mise en ligne sur Google Play.",
     "soon_btn": "Me prévenir",
-    "soon_note": "Nous envoyons un seul e-mail au lancement. Pas de spam."
+    "soon_note": "Nous envoyons un seul e-mail au lancement. Pas de spam.",
+    "theme_h": "Mode clair et sombre",
+    "theme_p": "Basculez entre les thèmes clair et sombre directement dans l'app. Agréable pour les yeux où que vous soyez.",
+    "theme_light": "Clair",
+    "theme_dark": "Sombre",
+    "device_h": "Fonctionne sur tous les appareils",
+    "device_p": "L'interface s'adapte à votre écran — téléphone, tablette ou pliable.",
+    "device_phone": "Téléphone",
+    "device_tablet": "Tablette",
+    "device_fold": "Pliable"
   },
   "de": {
     "html": "de",
@@ -402,7 +474,16 @@
     "soon_h": "Demnächst verfügbar",
     "soon_p": "Calc SmartX befindet sich in der Abschlussphase. Registrieren Sie sich, um bei Veröffentlichung im Google Play benachrichtigt zu werden.",
     "soon_btn": "Benachrichtigen",
-    "soon_note": "Wir senden eine einzige E-Mail beim Launch. Kein Spam."
+    "soon_note": "Wir senden eine einzige E-Mail beim Launch. Kein Spam.",
+    "theme_h": "Hell- und Dunkelmodus",
+    "theme_p": "Wechseln Sie direkt in der App zwischen hellem und dunklem Design. Augenfreundlich, wo immer Sie sind.",
+    "theme_light": "Hell",
+    "theme_dark": "Dunkel",
+    "device_h": "Auf jedem Gerät bestens nutzbar",
+    "device_p": "Die Benutzeroberfläche passt sich der Bildschirmgröße an — Smartphone, Tablet oder Foldable.",
+    "device_phone": "Smartphone",
+    "device_tablet": "Tablet",
+    "device_fold": "Foldable"
   },
   "ru": {
     "html": "ru",
@@ -447,7 +528,16 @@
     "soon_h": "Скоро",
     "soon_p": "Calc SmartX находится на финальной стадии разработки. Зарегистрируйтесь, чтобы получить уведомление о выходе в Google Play.",
     "soon_btn": "Уведомить меня",
-    "soon_note": "Мы пришлём одно письмо в день запуска. Без спама."
+    "soon_note": "Мы пришлём одно письмо в день запуска. Без спама.",
+    "theme_h": "Светлая и тёмная темы",
+    "theme_p": "Переключайте темы прямо в приложении. Комфортно для глаз в любом месте.",
+    "theme_light": "Светлая",
+    "theme_dark": "Тёмная",
+    "device_h": "Работает на любом устройстве",
+    "device_p": "Интерфейс подстраивается под размер экрана — смартфон, планшет или складной телефон.",
+    "device_phone": "Смартфон",
+    "device_tablet": "Планшет",
+    "device_fold": "Складной"
   },
   "th": {
     "html": "th",
@@ -492,7 +582,16 @@
     "soon_h": "เร็วๆ นี้",
     "soon_p": "Calc SmartX อยู่ในขั้นตอนสุดท้ายของการพัฒนา สมัครเพื่อรับแจ้งเตือนเมื่อวางจำหน่ายบน Google Play",
     "soon_btn": "แจ้งเตือนฉัน",
-    "soon_note": "เราส่งอีเมลเพียงฉบับเดียวเมื่อเปิดตัว ไม่มีสแปม"
+    "soon_note": "เราส่งอีเมลเพียงฉบับเดียวเมื่อเปิดตัว ไม่มีสแปม",
+    "theme_h": "โหมดสว่างและมืด",
+    "theme_p": "สลับระหว่างธีมสว่างและมืดได้ภายในแอป สบายตาไม่ว่าจะอยู่ที่ไหน",
+    "theme_light": "สว่าง",
+    "theme_dark": "มืด",
+    "device_h": "ใช้งานได้ทุกอุปกรณ์",
+    "device_p": "อินเทอร์เฟซปรับตามขนาดหน้าจออัตโนมัติ — สมาร์ทโฟน แท็บเล็ต หรือโทรศัพท์พับ",
+    "device_phone": "สมาร์ทโฟน",
+    "device_tablet": "แท็บเล็ต",
+    "device_fold": "โทรศัพท์พับ"
   },
   "id": {
     "html": "id",
@@ -537,6 +636,15 @@
     "soon_h": "Segera hadir",
     "soon_p": "Calc SmartX sedang dalam tahap pengembangan akhir. Daftar untuk mendapat pemberitahuan saat diluncurkan di Google Play.",
     "soon_btn": "Beritahu saya",
-    "soon_note": "Kami hanya mengirim satu email saat peluncuran. Tanpa spam."
+    "soon_note": "Kami hanya mengirim satu email saat peluncuran. Tanpa spam.",
+    "theme_h": "Mode terang dan gelap",
+    "theme_p": "Beralih antara tema terang dan gelap langsung di dalam aplikasi. Nyaman di mata di mana saja.",
+    "theme_light": "Terang",
+    "theme_dark": "Gelap",
+    "device_h": "Bekerja dengan baik di semua perangkat",
+    "device_p": "Antarmuka menyesuaikan ukuran layar — ponsel, tablet, atau ponsel lipat.",
+    "device_phone": "Ponsel",
+    "device_tablet": "Tablet",
+    "device_fold": "Ponsel lipat"
   }
 }
