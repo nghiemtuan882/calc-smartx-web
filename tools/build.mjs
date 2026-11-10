@@ -287,29 +287,25 @@ ${code === DEFAULT ? `<script>try{var l=localStorage.getItem('csx-lang');if(l&&l
         <h2 id="h-devices">${esc(T.device_h)}</h2>
         <p class="lead">${esc(T.device_p)}</p>
       </div>
-      <div class="device-tabs" role="tablist">
-        <button class="dev-tab is-active" role="tab" aria-selected="true" data-device="phone">${esc(T.device_phone)}</button>
-        <button class="dev-tab" role="tab" aria-selected="false" data-device="fold">${esc(T.device_fold)}</button>
-        <button class="dev-tab" role="tab" aria-selected="false" data-device="tablet">${esc(T.device_tablet)}</button>
-      </div>
-      <div class="device-stage" id="device-stage">
-        <div class="dev-scene" data-active="phone">
-          <div class="dev-frame dev-phone" data-device="phone">
-            <div class="dev-shell"><img class="dev-img" src="${up}static/shots/ui/${code}-light.webp" width="780" height="1600" loading="lazy" decoding="async" alt="${esc(T.device_phone)} – Calc SmartX"></div>
-          </div>
-          <div class="dev-frame dev-fold" data-device="fold">
-            <div class="fold" id="fold">
-              <div class="fold__half fold__right"><img src="${up}static/shots/ui/${code}-fold-open.webp" width="1500" height="1664" loading="lazy" decoding="async" alt="${esc(T.device_fold)} – Calc SmartX"></div>
-              <div class="fold__flap">
-                <div class="fold__face fold__front"><img src="${up}static/shots/ui/${code}-fold-open.webp" width="1500" height="1664" loading="lazy" decoding="async" alt=""></div>
-                <div class="fold__face fold__back"><img src="${up}static/shots/ui/${code}-fold-cover.webp" width="824" height="1920" loading="lazy" decoding="async" alt=""></div>
-              </div>
-            </div>
-          </div>
-          <div class="dev-frame dev-tablet" data-device="tablet">
-            <div class="dev-shell"><img class="dev-img" src="${up}static/shots/ui/${code}-tablet.webp" width="1707" height="1068" loading="lazy" decoding="async" alt="${esc(T.device_tablet)} – Calc SmartX"></div>
-          </div>
-        </div>
+      <div class="devices">
+        <figure class="dev dev-phone">
+          <div class="dev-shell"><img class="dev-img" src="${up}static/shots/ui/${code}-light.webp" width="780" height="1600" loading="lazy" decoding="async" alt="${esc(T.device_phone)} – Calc SmartX"></div>
+          <figcaption>${esc(T.device_phone)}</figcaption>
+        </figure>
+        <figure class="dev dev-fold">
+          <button type="button" class="fold is-closed" id="fold" aria-label="${esc(T.device_fold)}">
+            <span class="fold__half fold__right"><img src="${up}static/shots/ui/${code}-fold-open.webp" width="1500" height="1664" loading="lazy" decoding="async" alt="${esc(T.device_fold)} – Calc SmartX"></span>
+            <span class="fold__flap">
+              <span class="fold__face fold__front"><img src="${up}static/shots/ui/${code}-fold-open.webp" width="1500" height="1664" loading="lazy" decoding="async" alt=""></span>
+              <span class="fold__face fold__back"><img src="${up}static/shots/ui/${code}-fold-cover.webp" width="824" height="1920" loading="lazy" decoding="async" alt=""></span>
+            </span>
+          </button>
+          <figcaption>${esc(T.device_fold)}</figcaption>
+        </figure>
+        <figure class="dev dev-tablet">
+          <div class="dev-shell"><img class="dev-img" src="${up}static/shots/ui/${code}-tablet.webp" width="1707" height="1068" loading="lazy" decoding="async" alt="${esc(T.device_tablet)} – Calc SmartX"></div>
+          <figcaption>${esc(T.device_tablet)}</figcaption>
+        </figure>
       </div>
     </div>
   </section>

@@ -87,32 +87,19 @@
     });
   });
 
-  /* ---------- Device tabs ---------- */
-  const devScene = document.querySelector('.dev-scene');
-  document.querySelectorAll('.dev-tab').forEach((tab) => {
-    tab.addEventListener('click', () => {
-      document.querySelectorAll('.dev-tab').forEach(t => { t.classList.remove('is-active'); t.setAttribute('aria-selected', 'false'); });
-      tab.classList.add('is-active');
-      tab.setAttribute('aria-selected', 'true');
-      if (devScene) {
-        devScene.dataset.active = tab.dataset.device;
-        // foldable: show it closed (cover screen), then unfold to the inner screen
-        const fold = document.getElementById('fold');
-        if (fold && tab.dataset.device === 'fold') {
-          clearTimeout(fold._t);
-          fold.style.transition = 'none'; fold.querySelector('.fold__flap').style.transition = 'none';
-          fold.classList.add('is-closed');
-          void fold.offsetWidth;
-          fold.style.transition = ''; fold.querySelector('.fold__flap').style.transition = '';
-          fold._t = setTimeout(() => fold.classList.remove('is-closed'), 700);
-        }
-      }
-    });
-  });
-
-  // tap the foldable to fold / unfold it again
-  const foldEl = document.getElementById('fold');
-  if (foldEl) foldEl.addEventListener('click', () => { clearTimeout(foldEl._t); foldEl.classList.toggle('is-closed'); });
+  /* ---------- Foldable: unfolds when scrolled into view; tap to fold / unfold ---------- */
+  const fold = document.getElementById('fold');
+  if (fold) {
+    let t;
+    const open = () => { clearTimeout(t); t = setTimeout(() => fold.classList.remove('is-closed'), 450); };
+    const close = () => { clearTimeout(t); fold.classList.add('is-closed'); };
+    if (reduce || !('IntersectionObserver' in window)) fold.classList.remove('is-closed');
+    else new IntersectionObserver((es) => es.forEach((e) => {
+      if (e.isIntersecting && e.intersectionRatio >= 0.6) open();
+      else if (!e.isIntersecting) close();   // folds again off-screen, so it replays next time
+    }), { threshold: [0, 0.6] }).observe(fold);
+    fold.addEventListener('click', () => { clearTimeout(t); fold.classList.toggle('is-closed'); });
+  }
 
   /* ---------- FAQ accordion ---------- */
   document.querySelectorAll('.faq__q').forEach((btn) => {

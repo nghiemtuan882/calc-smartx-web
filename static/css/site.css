@@ -254,54 +254,41 @@ body { font-size: 1.0625rem; }
 /* ======================================================
    DEVICE SECTION — phone / tablet / foldable
    ====================================================== */
-.device-tabs { display: flex; gap: var(--space-xs); margin-block: var(--space-xl); }
-.dev-tab { padding: var(--space-xs) var(--space-lg); border-radius: 999px; border: var(--rule-hair) solid var(--color-rule-2); background: var(--color-paper-2); font: 500 var(--text-sm)/1.3 var(--font-display); color: var(--color-ink-2); cursor: pointer; transition: all var(--dur-short) var(--ease-out); }
-.dev-tab:hover { background: var(--color-paper-3); }
-.dev-tab.is-active { background: var(--color-graphite); color: var(--color-graphite-ink); border-color: transparent; }
-
-.device-stage { min-height: 520px; display: flex; align-items: center; justify-content: center; perspective: 1200px; }
-.dev-scene { position: relative; width: 100%; display: flex; align-items: center; justify-content: center; min-height: 500px; }
-
-/* All frames hidden by default; shown by data-active */
-.dev-frame { position: absolute; transition: opacity 0.45s ease, transform 0.45s ease; opacity: 0; pointer-events: none; transform: scale(0.9) translateY(16px); }
-.dev-scene[data-active="phone"]  .dev-frame[data-device="phone"]  { opacity: 1; pointer-events: auto; transform: none; }
-.dev-scene[data-active="tablet"] .dev-frame[data-device="tablet"] { opacity: 1; pointer-events: auto; transform: none; }
-.dev-scene[data-active="fold"]   .dev-frame[data-device="fold"]   { opacity: 1; pointer-events: auto; transform: none; }
-
-/* Device frames — real app screenshots */
-.dev-shell { background: #1c1c2e; border-radius: 32px; padding: 10px; box-shadow: 0 24px 64px rgba(0,0,0,.28), 0 4px 16px rgba(0,0,0,.14), inset 0 1px 0 rgba(255,255,255,.08); transition: transform .4s ease; }
-.dev-img { display: block; width: 100%; height: auto; border-radius: 22px; }
-.dev-phone .dev-shell { width: 230px; }
-.dev-tablet .dev-shell { width: min(640px, 86vw); border-radius: 26px; padding: 12px; }
-.dev-tablet .dev-img { border-radius: 14px; }
-.dev-phone:hover .dev-shell { transform: rotateX(4deg) rotateY(-6deg); }
-.dev-tablet:hover .dev-shell { transform: rotateX(3deg) rotateY(-4deg); }
+/* all three devices side by side, bottoms aligned (wraps on narrow screens) */
+.devices { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-end; gap: var(--space-xl) clamp(1.5rem, 3vw, 3rem); margin-top: var(--space-2xl); }
+.dev { margin: 0; display: flex; flex-direction: column; align-items: center; gap: var(--space-md); }
+.dev figcaption { font: 500 var(--text-sm)/1.3 var(--font-display); color: var(--color-ink-2); }
+.dev-shell { background: #1c1c2e; border-radius: 28px; padding: 8px; box-shadow: 0 24px 64px rgba(0,0,0,.22), 0 4px 16px rgba(0,0,0,.1); }
+.dev-img { display: block; width: 100%; height: auto; border-radius: 20px; }
+.dev-phone .dev-shell { width: 170px; }
+.dev-tablet .dev-shell { width: min(500px, 90vw); border-radius: 22px; padding: 10px; }
+.dev-tablet .dev-img { border-radius: 12px; }
 
 /* ---- Foldable (Galaxy Z Fold8 Ultra proportions): closed = cover screen, open = inner screen ---- */
-.dev-fold { --fw: min(420px, 84vw); --fh: calc((var(--fw) - 16px) * 832 / 750 + 16px); perspective: 1600px; }
-.fold { position: relative; width: var(--fw); height: var(--fh); transform-style: preserve-3d; transition: transform .9s cubic-bezier(.3,.7,.2,1); }
-.fold__half, .fold__flap { position: absolute; top: 0; width: 50%; height: 100%; }
-.fold__right { left: 50%; overflow: hidden; background: #fff; border: 8px solid #1c1c2e; border-left-width: 0; border-radius: 0 26px 26px 0; box-sizing: border-box; box-shadow: 0 24px 64px rgba(0,0,0,.25); transition: border-radius .3s; }
+.dev-fold { --fw: min(320px, 84vw); --fh: calc((var(--fw) - 16px) * 832 / 750 + 16px); perspective: 1600px; }
+.fold { position: relative; display: block; width: var(--fw); height: var(--fh); padding: 0; border: 0; background: none; cursor: pointer; transform-style: preserve-3d; transition: transform .9s cubic-bezier(.3,.7,.2,1); }
+.fold:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 6px; border-radius: 26px; }
+/* one shadow for the whole device (none between the halves) */
+.fold::before { content: ''; position: absolute; top: 0; bottom: 0; left: 0; right: 0; border-radius: 26px; box-shadow: 0 24px 64px rgba(0,0,0,.22), 0 4px 16px rgba(0,0,0,.1); transition: left .9s cubic-bezier(.3,.7,.2,1); }
+.fold.is-closed::before { left: 50%; }
+.fold__half, .fold__flap { position: absolute; top: 0; width: 50%; height: 100%; display: block; }
+.fold__right { left: 50%; overflow: hidden; background: #fff; border: 8px solid #1c1c2e; border-left-width: 0; border-radius: 0 26px 26px 0; box-sizing: border-box; transition: border-radius .3s; }
 .fold.is-closed .fold__right { border-radius: 26px; }
 .fold__flap { left: 0; transform-origin: 100% 50%; transform-style: preserve-3d; transition: transform .9s cubic-bezier(.3,.7,.2,1); }
-.fold__face { position: absolute; inset: 0; overflow: hidden; backface-visibility: hidden; -webkit-backface-visibility: hidden; background: #1c1c2e; box-sizing: border-box; }
-.fold__front { background: #fff; border: 8px solid #1c1c2e; border-right-width: 0; border-radius: 26px 0 0 26px; box-shadow: 0 24px 64px rgba(0,0,0,.25); }
-.fold__back { transform: rotateY(180deg); border: 8px solid #1c1c2e; border-radius: 26px; }
+.fold__face { position: absolute; inset: 0; display: block; overflow: hidden; backface-visibility: hidden; -webkit-backface-visibility: hidden; background: #fff; box-sizing: border-box; }
+.fold__front { border: 8px solid #1c1c2e; border-right-width: 0; border-radius: 26px 0 0 26px; }
+.fold__back { transform: rotateY(180deg); border: 8px solid #1c1c2e; border-radius: 26px; background: #1c1c2e; }
 /* inner screen split across the two halves */
 .fold__right img, .fold__front img { position: absolute; top: 0; height: 100%; width: auto; max-width: none; }
 .fold__front img { left: 0; }
 .fold__right img { right: 0; }
 .fold__back img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; border-radius: 18px; }
-.fold::after { content: ''; position: absolute; left: calc(50% - 6px); top: 8px; bottom: 8px; width: 12px; background: linear-gradient(90deg, transparent, rgba(0,0,0,.06) 45%, rgba(0,0,0,.06) 55%, transparent); pointer-events: none; transition: opacity .3s; }
 /* closed state: flap folded over the right half, device centred */
 .fold.is-closed { transform: translateX(-25%); }
 .fold.is-closed .fold__flap { transform: rotateY(180deg); }
-.fold.is-closed::after { opacity: 0; }
-.fold:not(.is-closed) .fold__flap { box-shadow: none; }
-@media (prefers-reduced-motion: reduce) { .fold, .fold__flap { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .fold, .fold__flap, .fold::before { transition: none; } }
 
-@media (max-width: 54rem) { .dev-tablet .dev-shell { width: min(560px, 90vw); } }
-@media (max-width: 40rem) { .dev-phone .dev-shell { width: 210px; } .device-tabs { flex-wrap: wrap; } }
+@media (max-width: 40rem) { .dev-phone .dev-shell { width: 190px; } }
 
 /* ---- Soon badge in nav ---- */
 .nav__soon { font: 500 var(--text-sm)/1 var(--font-display); color: var(--color-muted); padding: 0.4em 0.9em; border: var(--rule-hair) solid var(--color-rule-2); border-radius: 999px; white-space: nowrap; }
