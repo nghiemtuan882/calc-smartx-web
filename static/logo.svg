@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <!-- Nền Starlight Light Mode -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7FAFF" />
+      <stop offset="65%" stop-color="#E4EEFD" />
+      <stop offset="100%" stop-color="#CEDDFA" />
+    </linearGradient>
+
+    <!-- Viền khung Header Calc SmartX -->
+    <linearGradient id="headerBorderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#179A7A" />
+      <stop offset="50%" stop-color="#1C7C9C" />
+      <stop offset="100%" stop-color="#255C99" />
+    </linearGradient>
+
+    <!-- Vòng tròn trung tâm -->
+    <linearGradient id="centerRingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00B4D8" />
+      <stop offset="50%" stop-color="#6D28D9" />
+      <stop offset="100%" stop-color="#9333EA" />
+    </linearGradient>
+
+    <!-- Vành đai quỹ đạo chính -->
+    <linearGradient id="orbitGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22D3EE" />
+      <stop offset="50%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#FF6B8B" />
+    </linearGradient>
+
+    <!-- Dấu bằng trung tâm -->
+    <linearGradient id="equalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B28A8" />
+      <stop offset="100%" stop-color="#5B37EB" />
+    </linearGradient>
+
+    <!-- Bóng đổ mềm -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#4F46E5" flood-opacity="0.22" />
+    </filter>
+  </defs>
+
+  <!-- 1. Khung Squircle 1024x1024 -->
+  <rect x="0" y="0" width="1024" height="1024" rx="229" ry="229" fill="url(#bgGrad)" />
+
+  <!-- 2. Khung Header & Ngôi sao 4 cánh -->
+  <path d="M 185 108 H 858 A 54 54 0 0 1 912 162 V 226 A 54 54 0 0 1 858 280 H 166 A 54 54 0 0 1 112 226 V 172"
+        fill="none" stroke="url(#headerBorderGrad)" stroke-width="7.5" stroke-linecap="round" />
+  <path d="M 130 74 Q 130 118 174 118 Q 130 118 130 162 Q 130 118 86 118 Q 130 118 130 74 Z"
+        fill="#179A7A" />
+  <text x="518" y="232" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Inter', sans-serif"
+        font-size="104" font-weight="700" fill="#111144" letter-spacing="-1.5">Calc SmartX</text>
+
+  <!-- 3. Quỹ đạo phụ và Quỹ đạo chính -->
+  <g transform="translate(512, 556) rotate(-14)">
+    <ellipse cx="0" cy="0" rx="400" ry="195" fill="none" stroke="#38BDF8" stroke-width="4" opacity="0.65" />
+  </g>
+  <g transform="translate(512, 556) rotate(-22)" filter="url(#softGlow)">
+    <ellipse cx="0" cy="0" rx="385" ry="148" fill="none" stroke="url(#orbitGrad)" stroke-width="18" />
+  </g>
+
+  <!-- 4. Vòng tròn trung tâm & Dấu Bằng (=) -->
+  <circle cx="512" cy="548" r="218" fill="none" stroke="url(#centerRingGrad)" stroke-width="24" filter="url(#softGlow)" />
+  <g filter="url(#softGlow)">
+    <rect x="402" y="480" width="220" height="48" rx="12" fill="url(#equalGrad)" />
+    <rect x="402" y="568" width="220" height="48" rx="12" fill="url(#equalGrad)" />
+  </g>
+
+  <!-- 5. Nút Nhân (×) - Góc trên phải -->
+  <g transform="translate(758, 336)" filter="url(#softGlow)">
+    <circle cx="0" cy="0" r="55" fill="#311E85" />
+    <path d="M -20 -20 L 20 20 M 20 -20 L -20 20" stroke="#B79CED" stroke-width="14" stroke-linecap="round" />
+  </g>
+
+  <!-- 6. Nút Cộng (+) - Góc dưới trái -->
+  <g transform="translate(156, 658)" filter="url(#softGlow)">
+    <circle cx="0" cy="0" r="62" fill="#311E85" />
+    <path d="M -26 0 L 26 0 M 0 -26 L 0 26" stroke="#F47292" stroke-width="15" stroke-linecap="round" />
+  </g>
+
+  <!-- 7. Nút Trừ (−) - Phía đáy -->
+  <g transform="translate(388, 848)" filter="url(#softGlow)">
+    <circle cx="0" cy="0" r="58" fill="#311E85" />
+    <line x1="-26" y1="0" x2="26" y2="0" stroke="#C4A7F2" stroke-width="15" stroke-linecap="round" />
+  </g>
+
+  <!-- 8. Nút Chia (÷) - Góc dưới phải -->
+  <g transform="translate(724, 756)" filter="url(#softGlow)">
+    <circle cx="0" cy="0" r="57" fill="#311E85" />
+    <line x1="-25" y1="0" x2="25" y2="0" stroke="#56CCF2" stroke-width="13" stroke-linecap="round" />
+    <circle cx="0" cy="-22" r="7.5" fill="#56CCF2" />
+    <circle cx="0" cy="22" r="7.5" fill="#56CCF2" />
+  </g>
+</svg>

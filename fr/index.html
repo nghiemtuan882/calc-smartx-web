@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="fr" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calc SmartX: La calculatrice en feuille où les résultats suivent vos nombres</title>
+<meta name="description" content="Calc SmartX est une calculatrice en forme de feuille : modifiez un nombre et tous les résultats liés se recalculent. Notes sur chaque nombre, captures nettes, 12 langues.">
+<link rel="canonical" href="https://nghiemtuan882.github.io/calc-smartx-web/fr/">
+<link rel="alternate" hreflang="vi" href="https://nghiemtuan882.github.io/calc-smartx-web/">
+<link rel="alternate" hreflang="en" href="https://nghiemtuan882.github.io/calc-smartx-web/en/">
+<link rel="alternate" hreflang="zh-Hans" href="https://nghiemtuan882.github.io/calc-smartx-web/zh/">
+<link rel="alternate" hreflang="ja" href="https://nghiemtuan882.github.io/calc-smartx-web/ja/">
+<link rel="alternate" hreflang="ko" href="https://nghiemtuan882.github.io/calc-smartx-web/ko/">
+<link rel="alternate" hreflang="es" href="https://nghiemtuan882.github.io/calc-smartx-web/es/">
+<link rel="alternate" hreflang="pt" href="https://nghiemtuan882.github.io/calc-smartx-web/pt/">
+<link rel="alternate" hreflang="fr" href="https://nghiemtuan882.github.io/calc-smartx-web/fr/">
+<link rel="alternate" hreflang="de" href="https://nghiemtuan882.github.io/calc-smartx-web/de/">
+<link rel="alternate" hreflang="ru" href="https://nghiemtuan882.github.io/calc-smartx-web/ru/">
+<link rel="alternate" hreflang="th" href="https://nghiemtuan882.github.io/calc-smartx-web/th/">
+<link rel="alternate" hreflang="id" href="https://nghiemtuan882.github.io/calc-smartx-web/id/">
+<link rel="alternate" hreflang="x-default" href="https://nghiemtuan882.github.io/calc-smartx-web/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calc SmartX: La calculatrice en feuille où les résultats suivent vos nombres">
+<meta property="og:description" content="Calc SmartX est une calculatrice en forme de feuille : modifiez un nombre et tous les résultats liés se recalculent. Notes sur chaque nombre, captures nettes, 12 langues.">
+<meta property="og:url" content="https://nghiemtuan882.github.io/calc-smartx-web/fr/">
+<meta property="og:image" content="https://nghiemtuan882.github.io/calc-smartx-web/static/og.png">
+<meta property="og:locale" content="fr">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f7f9fc">
+<link rel="icon" href="../static/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../static/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600&family=Roboto:wght@300;400;500&family=IBM+Plex+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../static/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Calc SmartX","operatingSystem":"Android","applicationCategory":"UtilitiesApplication","softwareVersion":"1.2","inLanguage":"fr","description":"Calc SmartX est une calculatrice en forme de feuille : modifiez un nombre et tous les résultats liés se recalculent. Notes sur chaque nombre, captures nettes, 12 langues.","url":"https://nghiemtuan882.github.io/calc-smartx-web/fr/","image":"https://nghiemtuan882.github.io/calc-smartx-web/static/logo-512.png"}</script>
+
+</head>
+<body>
+<div id="splash" aria-hidden="true">
+  <div class="splash__ring"><img src="../static/logo.svg" alt="Calc SmartX" width="72" height="72"></div>
+  <div class="splash__name">Calc SmartX</div>
+  <div class="splash__bar-wrap"><div class="splash__bar"></div></div>
+</div>
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="nav">
+  <div class="container nav__in">
+    <a class="brand" href="../fr/"><img src="../static/logo.svg" alt="" width="52" height="52">Calc SmartX</a>
+    <nav class="nav__links" aria-label="Calc SmartX">
+      <a href="#features">Fonctions</a>
+      <a href="#example">Exemple</a>
+      <a href="#languages">Langues</a>
+    </nav>
+    <div class="nav__end">
+      <label class="langsel"><span class="langsel__lbl">Langue</span><span class="langsel__flag" aria-hidden="true">🇫🇷</span><select id="langsel"><option value="vi" data-href="../">Tiếng Việt</option><option value="en" data-href="../en/">English</option><option value="zh" data-href="../zh/">中文（简体）</option><option value="ja" data-href="../ja/">日本語</option><option value="ko" data-href="../ko/">한국어</option><option value="es" data-href="../es/">Español</option><option value="pt" data-href="../pt/">Português</option><option value="fr" data-href="../fr/" selected>Français</option><option value="de" data-href="../de/">Deutsch</option><option value="ru" data-href="../ru/">Русский</option><option value="th" data-href="../th/">ไทย</option><option value="id" data-href="../id/">Bahasa Indonesia</option></select><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></label>
+      <span class="nav__soon">Bientôt disponible</span>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="h1">
+    <canvas class="field" aria-hidden="true"></canvas>
+    <div class="container hero__in">
+      <div class="hero__text">
+        <h1 id="h1">Changez un nombre, la feuille suit</h1>
+        <p class="lead">Une calculatrice en feuille, avec une note sur chaque nombre.</p>
+        <div class="hero__acts"><span class="hero__soon-badge">Bientôt disponible</span></div>
+      </div>
+      <div class="hero__sheet">
+        <p class="try" id="try">Essayez : tapez sur le clavier pour changer la quantité</p>
+        <div class="phone" id="sheet" data-ex="{&quot;price&quot;:1250,&quot;qty&quot;:3,&quot;vat&quot;:20,&quot;parts&quot;:2,&quot;fee&quot;:150,&quot;cur&quot;:&quot;€&quot;,&quot;sep&quot;:&quot;space&quot;}" role="group" aria-labelledby="try">
+          <div class="ph__top" aria-hidden="true">
+            <span class="ph__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 14 5-5-5-5"/><path d="M20 9H9.5a5.5 5.5 0 0 0 0 11H13"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="heart"><path d="M12 20s-7.5-4.6-9.2-9.4C1.7 7.4 3.8 4 7.2 4c2 0 3.5 1.1 4.8 2.8C13.3 5.1 14.8 4 16.8 4c3.4 0 5.5 3.4 4.4 6.6C19.5 15.4 12 20 12 20z"/></svg></span>
+            <span class="ph__brand"><svg class="spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5C12.7 7.3 16.7 11.3 22.5 12C16.7 12.7 12.7 16.7 12 22.5C11.3 16.7 7.3 12.7 1.5 12C7.3 11.3 11.3 7.3 12 1.5Z" fill="currentColor"/></svg>Calc SmartX</span>
+            <span class="ph__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7.5 7.5 4.5-4.5 4.5 4.5"/><path d="M5 12v6.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V12"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8.5A1.5 1.5 0 0 1 5.5 7h2l1.5-2h6l1.5 2h2A1.5 1.5 0 0 1 20 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 17.5z"/><circle cx="12" cy="13" r="3.5"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span>
+          </div>
+          <div class="ph__sheet" aria-live="polite">
+            <div class="ln"><span class="t"><small>prix unitaire</small><b>1 250</b></span><span class="t o"><b>×</b></span><span class="t c3 box"><small>quantité</small><b data-v="qty">3</b></span><span class="t o"><b>=</b></span><span class="t c1 box"><small>montant</small><b data-v="amount">3 750</b></span></div>
+            <div class="ln"><span class="t c1"><small>montant</small><b data-v="amount">3 750</b></span><span class="t o"><b>+</b></span><span class="t"><b>20</b></span><span class="t o"><b>%</b></span><span class="t o"><b>=</b></span><span class="t c2 box"><small>TTC</small><b data-v="vat">4 500</b></span></div>
+            <div class="ln"><span class="t c2"><small>TTC</small><b data-v="vat">4 500</b></span><span class="t o"><b>÷</b></span><span class="t"><small>échéances</small><b>2</b></span><span class="t o"><b>=</b></span><span class="t"><small>par échéance</small><b data-v="each">2 250</b></span></div>
+            <div class="ln"><span class="t"><small>installation</small><b>150</b></span><span class="t o"><b>×</b></span><span class="t c3"><small>quantité</small><b data-v="qty">3</b></span><span class="t o"><b>=</b></span><span class="t"><small>total</small><b data-v="total">450</b></span></div>
+          </div>
+          <div class="ph__pad"><button type="button" class="k tl" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><button type="button" class="k tl" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6a1 1 0 0 1 1 1v1H8V5a1 1 0 0 1 1-1z"/><path d="M16 5h1.5A1.5 1.5 0 0 1 19 6.5V11M8 5H6.5A1.5 1.5 0 0 0 5 6.5v12A1.5 1.5 0 0 0 6.5 20H11"/><path d="m14 20 .5-2.5 5-5 2 2-5 5z"/></svg></button><button type="button" class="k tl" data-k="clear"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16"/><path d="M10 11v6M14 11v6"/><path d="M5.5 7l1 12a1.5 1.5 0 0 0 1.5 1.4h8a1.5 1.5 0 0 0 1.5-1.4l1-12"/><path d="M9 7V4.5h6V7"/></svg></button><button type="button" class="k tl" data-k="bs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5h10.5A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5H9l-6-7z"/><path d="m11 9 6 6M17 9l-6 6"/></svg></button><button type="button" class="k op" tabindex="-1" aria-hidden="true">÷</button><button type="button" class="k tl" tabindex="-1" aria-hidden="true">(</button><button type="button" class="k " data-k="7">7</button><button type="button" class="k " data-k="8">8</button><button type="button" class="k " data-k="9">9</button><button type="button" class="k op" tabindex="-1" aria-hidden="true">×</button><button type="button" class="k tl" tabindex="-1" aria-hidden="true">)</button><button type="button" class="k " data-k="4">4</button><button type="button" class="k " data-k="5">5</button><button type="button" class="k " data-k="6">6</button><button type="button" class="k op" tabindex="-1" aria-hidden="true">−</button><button type="button" class="k tl" tabindex="-1" aria-hidden="true">%</button><button type="button" class="k " data-k="1">1</button><button type="button" class="k " data-k="2">2</button><button type="button" class="k " data-k="3">3</button><button type="button" class="k op" tabindex="-1" aria-hidden="true">+</button><button type="button" class="k tl" tabindex="-1" aria-hidden="true">±</button><button type="button" class="k " tabindex="-1" aria-hidden="true">,</button><button type="button" class="k k000" data-k="000">000</button><button type="button" class="k " data-k="0">0</button><button type="button" class="k op" tabindex="-1" aria-hidden="true">=</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="example" aria-labelledby="h-ex">
+    <div class="container ex">
+      <figure class="ex__shot cut" style="margin:0"><img src="../static/shots/fr.webp" width="824" height="1560" loading="lazy" decoding="async" alt="Calc SmartX affichant une feuille d’exemple en français"></figure>
+      <div class="ex__body">
+        <h2 id="h-ex">Une vraie feuille, en français</h2>
+        <p>Capture de Calc SmartX. Prix unitaire en €, plus 20 % de TVA, payé en 2 échéances. Changez la quantité : les quatre lignes se mettent à jour.</p>
+        <div class="ledger-wrap">
+          <table class="ledger">
+            <thead><tr><th scope="col">Calcul</th><th scope="col">Résultat</th><th scope="col">Note</th></tr></thead>
+            <tbody><tr><td class="m">1 250 × 3</td><td class="m">3 750</td><td>prix unitaire × quantité = montant</td></tr><tr class="hit"><td class="m">3 750 + 20 %</td><td class="m">4 500</td><td>TTC</td></tr><tr><td class="m">4 500 ÷ 2</td><td class="m">2 250</td><td>par échéance (échéances: 2)</td></tr><tr><td class="m">150 × 3</td><td class="m">450</td><td>installation × quantité = total</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="features" aria-labelledby="h-feat">
+    <div class="container">
+      <div class="sec__head">
+        <h2 id="h-feat">15 fonctions, en mouvement</h2>
+        <p class="lead">Chaque animation est enregistrée dans l’application même, dans la langue de cette page.</p>
+      </div>
+      
+      <div class="grp">
+        <div class="grp__h"><span aria-hidden="true">01</span><h3>Calculs liés</h3></div>
+        <ul class="feats">
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/fr-f1.gif" width="546" height="285" loading="lazy" decoding="async" alt="Changez un nombre, tout suit"></div>
+            <h4>Changez un nombre, tout suit</h4>
+            <p>Touchez n’importe quel nombre pour le modifier. Les résultats liés se recalculent.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/fr-f2.gif" width="546" height="285" loading="lazy" decoding="async" alt="Continuez depuis un résultat"></div>
+            <h4>Continuez depuis un résultat</h4>
+            <p>Touchez un résultat puis + − × ÷. La nouvelle ligne reste liée.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/fr-f3.gif" width="546" height="285" loading="lazy" decoding="async" alt="Glissez pour lier"></div>
+            <h4>Glissez pour lier</h4>
+            <p>Maintenez et faites glisser un nombre : une petite carte suit votre doigt. Lâchez-la sur un nombre pour le remplacer, ou sous la dernière ligne pour en créer une.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/fr-f7.gif" width="546" height="285" loading="lazy" decoding="async" alt="Touchez un nombre pour le lier"></div>
+            <h4>Touchez un nombre pour le lier</h4>
+            <p>Après un opérateur, touchez n’importe quel nombre plus haut : il arrive déjà lié.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/fr-f11.gif" width="546" height="285" loading="lazy" decoding="async" alt="Touchez un signe pour le changer"></div>
+            <h4>Touchez un signe pour le changer</h4>
+            <p>Touchez + − × ÷ dans un calcul et choisissez un autre signe. Le résultat se recalcule aussitôt.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="grp">
+        <div class="grp__h"><span aria-hidden="true">02</span><h3>Saisir et corriger vite</h3></div>
+        <ul class="feats">
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/fr-f12.gif" width="546" height="285" loading="lazy" decoding="async" alt="⌫ intelligent"></div>
+            <h4>⌫ intelligent</h4>
+            <p>Touchez ⌫ pour effacer caractère par caractère, signes compris. Si un résultat est sélectionné, ⌫ passe au dernier nombre. Maintenez ⌫ pour effacer toute la ligne.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/fr-f13.gif" width="546" height="285" loading="lazy" decoding="async" alt="Touche 000 pour les montants"></div>
+            <h4>Touche 000 pour les montants</h4>
+            <p>Tapez 12 puis 000 deux fois pour obtenir 12 000 000, sans taper six fois 0.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/fr-f9.gif" width="546" height="285" loading="lazy" decoding="async" alt="Glissez un opérateur pour déplacer"></div>
+            <h4>Glissez un opérateur pour déplacer</h4>
+            <p>Maintenez et faites glisser + − × ÷ ou = pour déplacer tout le calcul.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="grp">
+        <div class="grp__h"><span aria-hidden="true">03</span><h3>Notes et mise en page</h3></div>
+        <ul class="feats">
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/fr-f4.gif" width="546" height="285" loading="lazy" decoding="async" alt="Une note par nombre"></div>
+            <h4>Une note par nombre</h4>
+            <p>Touchez la touche note et écrivez « prix unitaire », « quantité » au-dessus du nombre.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/fr-f10.gif" width="546" height="285" loading="lazy" decoding="async" alt="Glissez la colonne des opérateurs pour zoomer"></div>
+            <h4>Glissez la colonne des opérateurs pour zoomer</h4>
+            <p>Posez le doigt sur la colonne + − × ÷ : vers le haut pour agrandir, vers le bas pour réduire.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/fr-f14.gif" width="546" height="285" loading="lazy" decoding="async" alt="Glissez sur le clavier pour l’espacement"></div>
+            <h4>Glissez sur le clavier pour l’espacement</h4>
+            <p>Glissez horizontalement sur la rangée du haut pour espacer les nombres, verticalement sur la colonne de gauche pour espacer les lignes.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/fr-f6.gif" width="546" height="285" loading="lazy" decoding="async" alt="À votre goût"></div>
+            <h4>À votre goût</h4>
+            <p>Changez couleur, police, taille, langue, mode sombre et clavier pour gaucher.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="grp">
+        <div class="grp__h"><span aria-hidden="true">04</span><h3>Capturer et partager</h3></div>
+        <ul class="feats">
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/fr-f5.gif" width="546" height="285" loading="lazy" decoding="async" alt="Captures nettes"></div>
+            <h4>Captures nettes</h4>
+            <p>Capturez tout l’écran, une zone dessinée ou seulement les lignes choisies.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/fr-f8.gif" width="546" height="285" loading="lazy" decoding="async" alt="Capturez seulement les lignes utiles"></div>
+            <h4>Capturez seulement les lignes utiles</h4>
+            <p>Choisissez des lignes même éloignées ; l’image les met côte à côte.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/fr-f15.gif" width="546" height="285" loading="lazy" decoding="async" alt="Envoyez l’image directement"></div>
+            <h4>Envoyez l’image directement</h4>
+            <p>Après la capture, enregistrez l’image ou envoyez-la tout de suite via Zalo, WhatsApp, Viber, Telegram ou Messenger.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="languages" aria-labelledby="h-lang">
+    <div class="container">
+      <div class="sec__head">
+        <h2 id="h-lang">12 langues, des nombres écrits à la façon locale</h2>
+        <p class="lead">Les séparateurs de milliers et de décimales suivent la langue. Un autre style ? Choisissez-le dans les Réglages.</p>
+      </div>
+      <ul class="langs"><li><a href="../" hreflang="vi" lang="vi" data-lang="vi"><span class="flag" aria-hidden="true">🇻🇳</span><strong>Tiếng Việt</strong></a></li><li><a href="../en/" hreflang="en" lang="en" data-lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><strong>English</strong></a></li><li><a href="../zh/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh"><span class="flag" aria-hidden="true">🇨🇳</span><strong>中文（简体）</strong></a></li><li><a href="../ja/" hreflang="ja" lang="ja" data-lang="ja"><span class="flag" aria-hidden="true">🇯🇵</span><strong>日本語</strong></a></li><li><a href="../ko/" hreflang="ko" lang="ko" data-lang="ko"><span class="flag" aria-hidden="true">🇰🇷</span><strong>한국어</strong></a></li><li><a href="../es/" hreflang="es" lang="es" data-lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><strong>Español</strong></a></li><li><a href="../pt/" hreflang="pt" lang="pt" data-lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><strong>Português</strong></a></li><li><a href="../fr/" hreflang="fr" lang="fr" data-lang="fr" aria-current="page"><span class="flag" aria-hidden="true">🇫🇷</span><strong>Français</strong></a></li><li><a href="../de/" hreflang="de" lang="de" data-lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><strong>Deutsch</strong></a></li><li><a href="../ru/" hreflang="ru" lang="ru" data-lang="ru"><span class="flag" aria-hidden="true">🇷🇺</span><strong>Русский</strong></a></li><li><a href="../th/" hreflang="th" lang="th" data-lang="th"><span class="flag" aria-hidden="true">🇹🇭</span><strong>ไทย</strong></a></li><li><a href="../id/" hreflang="id" lang="id" data-lang="id"><span class="flag" aria-hidden="true">🇮🇩</span><strong>Bahasa Indonesia</strong></a></li></ul>
+    </div>
+  </section>
+
+  <section class="sec theme-sec" id="themes" aria-labelledby="h-themes">
+    <div class="container">
+      <div class="theme-layout">
+        <div class="theme-text">
+          <h2 id="h-themes">Mode clair et sombre</h2>
+          <p class="lead">Basculez entre les thèmes clair et sombre directement dans l'app. Agréable pour les yeux où que vous soyez.</p>
+          <div class="theme-toggle" role="group">
+            <button class="theme-btn theme-btn--light is-active" data-theme="light">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+              Clair
+            </button>
+            <button class="theme-btn theme-btn--dark" data-theme="dark">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              Sombre
+            </button>
+          </div>
+        </div>
+        <div class="theme-preview">
+          <div class="theme-mockup" id="theme-mockup" data-active="light">
+            <img class="tm-light" src="../static/shots/ui/fr-light.webp" width="780" height="1600" loading="lazy" decoding="async" alt="Clair – Calc SmartX">
+            <img class="tm-dark" src="../static/shots/ui/fr-dark.webp" width="780" height="1600" loading="lazy" decoding="async" alt="Sombre – Calc SmartX">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec device-sec" id="devices" aria-labelledby="h-devices">
+    <div class="container">
+      <div class="sec__head">
+        <h2 id="h-devices">Fonctionne sur tous les appareils</h2>
+        <p class="lead">L'interface s'adapte à votre écran — téléphone, tablette ou pliable.</p>
+      </div>
+      <div class="devices">
+        <figure class="dev dev-phone">
+          <div class="dev-shell"><img class="dev-img" src="../static/shots/ui/fr-light.webp" width="780" height="1600" loading="lazy" decoding="async" alt="Téléphone – Calc SmartX"></div>
+          <figcaption>Téléphone</figcaption>
+        </figure>
+        <figure class="dev dev-fold">
+          <button type="button" class="fold is-closed" id="fold" aria-label="Pliable">
+            <span class="fold__half fold__right"><img src="../static/shots/ui/fr-fold-open.webp" width="1500" height="1664" loading="lazy" decoding="async" alt="Pliable – Calc SmartX"></span>
+            <span class="fold__flap">
+              <span class="fold__face fold__front"><img src="../static/shots/ui/fr-fold-open.webp" width="1500" height="1664" loading="lazy" decoding="async" alt=""></span>
+              <span class="fold__face fold__back"><img src="../static/shots/ui/fr-fold-cover.webp" width="824" height="1920" loading="lazy" decoding="async" alt=""></span>
+            </span>
+          </button>
+          <figcaption>Pliable</figcaption>
+        </figure>
+        <figure class="dev dev-tablet">
+          <div class="dev-shell"><img class="dev-img" src="../static/shots/ui/fr-tablet.webp" width="1707" height="1068" loading="lazy" decoding="async" alt="Tablette – Calc SmartX"></div>
+          <figcaption>Tablette</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec faq-sec" id="faq" aria-labelledby="h-faq">
+    <div class="container">
+      <div class="sec__head">
+        <h2 id="h-faq">Questions fréquentes</h2>
+      </div>
+      <dl class="faq">
+        <div class="faq__item">
+          <dt><button class="faq__q" aria-expanded="false">L'appli est-elle gratuite ?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></dt>
+          <dd class="faq__a" hidden>Calc SmartX est entièrement gratuit — sans publicité ni achat intégré.</dd>
+        </div>
+        <div class="faq__item">
+          <dt><button class="faq__q" aria-expanded="false">Fonctionne-t-elle hors ligne ?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></dt>
+          <dd class="faq__a" hidden>Oui. Tous les calculs s'effectuent sur votre appareil, sans connexion internet.</dd>
+        </div>
+        <div class="faq__item">
+          <dt><button class="faq__q" aria-expanded="false">Est-elle disponible sur iOS ?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></dt>
+          <dd class="faq__a" hidden>Calc SmartX est actuellement disponible sur Android. Une version iOS est prévue.</dd>
+        </div>
+        <div class="faq__item">
+          <dt><button class="faq__q" aria-expanded="false">Combien de lignes peut avoir une feuille ?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></dt>
+          <dd class="faq__a" hidden>Il n'y a aucune limite de lignes. La feuille peut être aussi longue que nécessaire.</dd>
+        </div>
+        <div class="faq__item">
+          <dt><button class="faq__q" aria-expanded="false">Mes données sont-elles sauvegardées ?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></dt>
+          <dd class="faq__a" hidden>Les données sont stockées localement sur votre appareil et ne sont jamais envoyées à un serveur.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="soon-sec" id="soon" aria-labelledby="h-soon">
+    <div class="container">
+      <div class="soon__panel">
+        <div class="soon__icon"><img src="../static/logo.svg" alt="" width="72" height="72"></div>
+        <div class="soon__body">
+          <h2 id="h-soon">Bientôt disponible</h2>
+          <p>Calc SmartX est en phase finale de développement. Inscrivez-vous pour être averti dès sa mise en ligne sur Google Play.</p>
+          <form class="soon__form" action="https://formspree.io/f/xvgrzojn" method="POST" novalidate>
+            <input type="email" name="email" required placeholder="your@email.com" autocomplete="email">
+            <button type="submit" class="key key--primary">Me prévenir</button>
+          </form>
+          <p class="soon__note">Nous envoyons un seul e-mail au lancement. Pas de spam.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dl" aria-labelledby="h-dl">
+    <div class="container">
+      <div class="dl__panel">
+        <div class="gfield" aria-hidden="true"></div>
+        <h2 id="h-dl">Bientôt disponible</h2>
+        <p>Calc SmartX est en phase finale de développement. Inscrivez-vous pour être averti dès sa mise en ligne sur Google Play.</p>
+        <div class="dl__act"><img src="../static/logo.svg" alt="" width="88" height="88">
+          <form class="soon__form soon__form--inline" action="https://formspree.io/f/xvgrzojn" method="POST" novalidate>
+            <input type="email" name="email" required placeholder="your@email.com" autocomplete="email">
+            <button type="submit" class="key key--primary">Me prévenir</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="container">
+    <div class="foot__mast">
+      <a class="brand" href="../fr/"><img src="../static/logo.svg" alt="" width="48" height="48">Calc SmartX</a>
+      <p>La calculatrice en feuille aux nombres liés.</p>
+    </div>
+    <div class="foot__row">
+      <span>© 2026 Calc SmartX</span>
+      <span>Android</span>
+    </div>
+  </div>
+</footer>
+<script src="../static/js/site.js" defer></script>
+</body>
+</html>

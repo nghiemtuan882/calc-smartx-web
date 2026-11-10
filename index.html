@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="vi" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calc SmartX: Máy tính dạng bảng, sửa một số cả bảng tự tính lại</title>
+<meta name="description" content="Calc SmartX là máy tính dạng bảng: sửa một số, mọi kết quả liên quan tự tính lại. Ghi chú trên từng số, chụp gọn, gửi ngay qua Zalo. Có 12 ngôn ngữ.">
+<link rel="canonical" href="https://nghiemtuan882.github.io/calc-smartx-web/">
+<link rel="alternate" hreflang="vi" href="https://nghiemtuan882.github.io/calc-smartx-web/">
+<link rel="alternate" hreflang="en" href="https://nghiemtuan882.github.io/calc-smartx-web/en/">
+<link rel="alternate" hreflang="zh-Hans" href="https://nghiemtuan882.github.io/calc-smartx-web/zh/">
+<link rel="alternate" hreflang="ja" href="https://nghiemtuan882.github.io/calc-smartx-web/ja/">
+<link rel="alternate" hreflang="ko" href="https://nghiemtuan882.github.io/calc-smartx-web/ko/">
+<link rel="alternate" hreflang="es" href="https://nghiemtuan882.github.io/calc-smartx-web/es/">
+<link rel="alternate" hreflang="pt" href="https://nghiemtuan882.github.io/calc-smartx-web/pt/">
+<link rel="alternate" hreflang="fr" href="https://nghiemtuan882.github.io/calc-smartx-web/fr/">
+<link rel="alternate" hreflang="de" href="https://nghiemtuan882.github.io/calc-smartx-web/de/">
+<link rel="alternate" hreflang="ru" href="https://nghiemtuan882.github.io/calc-smartx-web/ru/">
+<link rel="alternate" hreflang="th" href="https://nghiemtuan882.github.io/calc-smartx-web/th/">
+<link rel="alternate" hreflang="id" href="https://nghiemtuan882.github.io/calc-smartx-web/id/">
+<link rel="alternate" hreflang="x-default" href="https://nghiemtuan882.github.io/calc-smartx-web/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calc SmartX: Máy tính dạng bảng, sửa một số cả bảng tự tính lại">
+<meta property="og:description" content="Calc SmartX là máy tính dạng bảng: sửa một số, mọi kết quả liên quan tự tính lại. Ghi chú trên từng số, chụp gọn, gửi ngay qua Zalo. Có 12 ngôn ngữ.">
+<meta property="og:url" content="https://nghiemtuan882.github.io/calc-smartx-web/">
+<meta property="og:image" content="https://nghiemtuan882.github.io/calc-smartx-web/static/og.png">
+<meta property="og:locale" content="vi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f7f9fc">
+<link rel="icon" href="./static/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./static/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600&family=Roboto:wght@300;400;500&family=IBM+Plex+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./static/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Calc SmartX","operatingSystem":"Android","applicationCategory":"UtilitiesApplication","softwareVersion":"1.2","inLanguage":"vi","description":"Calc SmartX là máy tính dạng bảng: sửa một số, mọi kết quả liên quan tự tính lại. Ghi chú trên từng số, chụp gọn, gửi ngay qua Zalo. Có 12 ngôn ngữ.","url":"https://nghiemtuan882.github.io/calc-smartx-web/","image":"https://nghiemtuan882.github.io/calc-smartx-web/static/logo-512.png"}</script>
+<script>try{var l=localStorage.getItem('csx-lang');if(l&&l!=='vi'&&["vi","en","zh","ja","ko","es","pt","fr","de","ru","th","id"].indexOf(l)>0)location.replace(l+'/')}catch(e){}</script>
+</head>
+<body>
+<div id="splash" aria-hidden="true">
+  <div class="splash__ring"><img src="./static/logo.svg" alt="Calc SmartX" width="72" height="72"></div>
+  <div class="splash__name">Calc SmartX</div>
+  <div class="splash__bar-wrap"><div class="splash__bar"></div></div>
+</div>
+<a class="skip" href="#main">Bỏ qua đến nội dung</a>
+<header class="nav">
+  <div class="container nav__in">
+    <a class="brand" href=""><img src="./static/logo.svg" alt="" width="52" height="52">Calc SmartX</a>
+    <nav class="nav__links" aria-label="Calc SmartX">
+      <a href="#features">Tính năng</a>
+      <a href="#example">Ví dụ</a>
+      <a href="#languages">Ngôn ngữ</a>
+    </nav>
+    <div class="nav__end">
+      <label class="langsel"><span class="langsel__lbl">Ngôn ngữ</span><span class="langsel__flag" aria-hidden="true">🇻🇳</span><select id="langsel"><option value="vi" data-href="" selected>Tiếng Việt</option><option value="en" data-href="en/">English</option><option value="zh" data-href="zh/">中文（简体）</option><option value="ja" data-href="ja/">日本語</option><option value="ko" data-href="ko/">한국어</option><option value="es" data-href="es/">Español</option><option value="pt" data-href="pt/">Português</option><option value="fr" data-href="fr/">Français</option><option value="de" data-href="de/">Deutsch</option><option value="ru" data-href="ru/">Русский</option><option value="th" data-href="th/">ไทย</option><option value="id" data-href="id/">Bahasa Indonesia</option></select><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></label>
+      <span class="nav__soon">Sắp ra mắt</span>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="h1">
+    <canvas class="field" aria-hidden="true"></canvas>
+    <div class="container hero__in">
+      <div class="hero__text">
+        <h1 id="h1">Sửa một số, cả bảng tính lại</h1>
+        <p class="lead">Máy tính dạng bảng, có ghi chú ngay trên từng số.</p>
+        <div class="hero__acts"><span class="hero__soon-badge">Sắp ra mắt</span></div>
+      </div>
+      <div class="hero__sheet">
+        <p class="try" id="try">Thử ngay: bấm phím số để đổi số lượng</p>
+        <div class="phone" id="sheet" data-ex="{&quot;price&quot;:1250000,&quot;qty&quot;:3,&quot;vat&quot;:10,&quot;parts&quot;:2,&quot;fee&quot;:500000,&quot;cur&quot;:&quot;₫&quot;,&quot;sep&quot;:&quot;dot&quot;}" role="group" aria-labelledby="try">
+          <div class="ph__top" aria-hidden="true">
+            <span class="ph__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 14 5-5-5-5"/><path d="M20 9H9.5a5.5 5.5 0 0 0 0 11H13"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="heart"><path d="M12 20s-7.5-4.6-9.2-9.4C1.7 7.4 3.8 4 7.2 4c2 0 3.5 1.1 4.8 2.8C13.3 5.1 14.8 4 16.8 4c3.4 0 5.5 3.4 4.4 6.6C19.5 15.4 12 20 12 20z"/></svg></span>
+            <span class="ph__brand"><svg class="spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5C12.7 7.3 16.7 11.3 22.5 12C16.7 12.7 12.7 16.7 12 22.5C11.3 16.7 7.3 12.7 1.5 12C7.3 11.3 11.3 7.3 12 1.5Z" fill="currentColor"/></svg>Calc SmartX</span>
+            <span class="ph__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7.5 7.5 4.5-4.5 4.5 4.5"/><path d="M5 12v6.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V12"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8.5A1.5 1.5 0 0 1 5.5 7h2l1.5-2h6l1.5 2h2A1.5 1.5 0 0 1 20 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 17.5z"/><circle cx="12" cy="13" r="3.5"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span>
+          </div>
+          <div class="ph__sheet" aria-live="polite">
+            <div class="ln"><span class="t"><small>đơn giá</small><b>1.250.000</b></span><span class="t o"><b>×</b></span><span class="t c3 box"><small>số lượng</small><b data-v="qty">3</b></span><span class="t o"><b>=</b></span><span class="t c1 box"><small>thành tiền</small><b data-v="amount">3.750.000</b></span></div>
+            <div class="ln"><span class="t c1"><small>thành tiền</small><b data-v="amount">3.750.000</b></span><span class="t o"><b>+</b></span><span class="t"><b>10</b></span><span class="t o"><b>%</b></span><span class="t o"><b>=</b></span><span class="t c2 box"><small>có VAT</small><b data-v="vat">4.125.000</b></span></div>
+            <div class="ln"><span class="t c2"><small>có VAT</small><b data-v="vat">4.125.000</b></span><span class="t o"><b>÷</b></span><span class="t"><small>số đợt</small><b>2</b></span><span class="t o"><b>=</b></span><span class="t"><small>mỗi đợt</small><b data-v="each">2.062.500</b></span></div>
+            <div class="ln"><span class="t"><small>phí lắp đặt</small><b>500.000</b></span><span class="t o"><b>×</b></span><span class="t c3"><small>số lượng</small><b data-v="qty">3</b></span><span class="t o"><b>=</b></span><span class="t"><small>tổng phí</small><b data-v="total">1.500.000</b></span></div>
+          </div>
+          <div class="ph__pad"><button type="button" class="k tl" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><button type="button" class="k tl" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6a1 1 0 0 1 1 1v1H8V5a1 1 0 0 1 1-1z"/><path d="M16 5h1.5A1.5 1.5 0 0 1 19 6.5V11M8 5H6.5A1.5 1.5 0 0 0 5 6.5v12A1.5 1.5 0 0 0 6.5 20H11"/><path d="m14 20 .5-2.5 5-5 2 2-5 5z"/></svg></button><button type="button" class="k tl" data-k="clear"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16"/><path d="M10 11v6M14 11v6"/><path d="M5.5 7l1 12a1.5 1.5 0 0 0 1.5 1.4h8a1.5 1.5 0 0 0 1.5-1.4l1-12"/><path d="M9 7V4.5h6V7"/></svg></button><button type="button" class="k tl" data-k="bs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5h10.5A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5H9l-6-7z"/><path d="m11 9 6 6M17 9l-6 6"/></svg></button><button type="button" class="k op" tabindex="-1" aria-hidden="true">÷</button><button type="button" class="k tl" tabindex="-1" aria-hidden="true">(</button><button type="button" class="k " data-k="7">7</button><button type="button" class="k " data-k="8">8</button><button type="button" class="k " data-k="9">9</button><button type="button" class="k op" tabindex="-1" aria-hidden="true">×</button><button type="button" class="k tl" tabindex="-1" aria-hidden="true">)</button><button type="button" class="k " data-k="4">4</button><button type="button" class="k " data-k="5">5</button><button type="button" class="k " data-k="6">6</button><button type="button" class="k op" tabindex="-1" aria-hidden="true">−</button><button type="button" class="k tl" tabindex="-1" aria-hidden="true">%</button><button type="button" class="k " data-k="1">1</button><button type="button" class="k " data-k="2">2</button><button type="button" class="k " data-k="3">3</button><button type="button" class="k op" tabindex="-1" aria-hidden="true">+</button><button type="button" class="k tl" tabindex="-1" aria-hidden="true">±</button><button type="button" class="k " tabindex="-1" aria-hidden="true">,</button><button type="button" class="k k000" data-k="000">000</button><button type="button" class="k " data-k="0">0</button><button type="button" class="k op" tabindex="-1" aria-hidden="true">=</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="example" aria-labelledby="h-ex">
+    <div class="container ex">
+      <figure class="ex__shot cut" style="margin:0"><img src="./static/shots/vi.webp" width="824" height="1560" loading="lazy" decoding="async" alt="Calc SmartX hiện bảng tính mẫu bằng tiếng Việt"></figure>
+      <div class="ex__body">
+        <h2 id="h-ex">Một bảng tính thật, bằng tiếng Việt</h2>
+        <p>Ảnh chụp từ Calc SmartX. Đơn giá tính bằng ₫, cộng 10 % thuế rồi chia 2 đợt trả. Đổi số lượng là cả bốn dòng cùng đổi.</p>
+        <div class="ledger-wrap">
+          <table class="ledger">
+            <thead><tr><th scope="col">Phép tính</th><th scope="col">Kết quả</th><th scope="col">Ghi chú</th></tr></thead>
+            <tbody><tr><td class="m">1.250.000 × 3</td><td class="m">3.750.000</td><td>đơn giá × số lượng = thành tiền</td></tr><tr class="hit"><td class="m">3.750.000 + 10 %</td><td class="m">4.125.000</td><td>có VAT</td></tr><tr><td class="m">4.125.000 ÷ 2</td><td class="m">2.062.500</td><td>mỗi đợt (số đợt: 2)</td></tr><tr><td class="m">500.000 × 3</td><td class="m">1.500.000</td><td>phí lắp đặt × số lượng = tổng phí</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="features" aria-labelledby="h-feat">
+    <div class="container">
+      <div class="sec__head">
+        <h2 id="h-feat">15 tính năng, xem tận mắt</h2>
+        <p class="lead">Mỗi hoạt cảnh quay từ chính ứng dụng, đúng ngôn ngữ bạn đang xem.</p>
+      </div>
+      
+      <div class="grp">
+        <div class="grp__h"><span aria-hidden="true">01</span><h3>Tính toán liên kết</h3></div>
+        <ul class="feats">
+          <li class="feat">
+            <div class="feat__clip cut"><img src="./static/gif/vi-f1.gif" width="546" height="285" loading="lazy" decoding="async" alt="Sửa số, kết quả đổi ngay"></div>
+            <h4>Sửa số, kết quả đổi ngay</h4>
+            <p>Chạm vào bất kỳ số nào để sửa. Mọi kết quả liên quan tự tính lại.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="./static/gif/vi-f2.gif" width="546" height="285" loading="lazy" decoding="async" alt="Tính tiếp từ kết quả"></div>
+            <h4>Tính tiếp từ kết quả</h4>
+            <p>Chạm vào một kết quả rồi bấm + − × ÷. Dòng mới liên kết với kết quả đó.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="./static/gif/vi-f3.gif" width="546" height="285" loading="lazy" decoding="async" alt="Kéo thả để liên kết"></div>
+            <h4>Kéo thả để liên kết</h4>
+            <p>Giữ và kéo một số: ô nhỏ hiện trên ngón tay. Thả vào số nào thì thay số đó, kéo xuống dưới cùng để tạo dòng mới.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="./static/gif/vi-f7.gif" width="546" height="285" loading="lazy" decoding="async" alt="Chạm số để liên kết"></div>
+            <h4>Chạm số để liên kết</h4>
+            <p>Bấm phép tính xong, chạm vào bất kỳ số nào ở dòng trên để đưa nó vào, có liên kết sẵn.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="./static/gif/vi-f11.gif" width="546" height="285" loading="lazy" decoding="async" alt="Chạm vào dấu để đổi phép tính"></div>
+            <h4>Chạm vào dấu để đổi phép tính</h4>
+            <p>Chạm vào dấu + − × ÷ trong phép tính, chọn dấu mới, kết quả tự tính lại.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="grp">
+        <div class="grp__h"><span aria-hidden="true">02</span><h3>Nhập và sửa nhanh</h3></div>
+        <ul class="feats">
+          <li class="feat">
+            <div class="feat__clip cut"><img src="./static/gif/vi-f12.gif" width="546" height="285" loading="lazy" decoding="async" alt="Xóa thông minh bằng ⌫"></div>
+            <h4>Xóa thông minh bằng ⌫</h4>
+            <p>Chạm ⌫ để xóa từng ký tự, kể cả dấu phép tính. Đang chọn đáp án thì ⌫ chuyển vào số cuối để sửa. Giữ ⌫ để xóa cả dòng.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="./static/gif/vi-f13.gif" width="546" height="285" loading="lazy" decoding="async" alt="Phím 000 nhập tiền nhanh"></div>
+            <h4>Phím 000 nhập tiền nhanh</h4>
+            <p>Gõ 12 rồi bấm 000 hai lần là thành 12.000.000, khỏi bấm sáu lần số 0.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="./static/gif/vi-f9.gif" width="546" height="285" loading="lazy" decoding="async" alt="Kéo dấu phép tính để di chuyển"></div>
+            <h4>Kéo dấu phép tính để di chuyển</h4>
+            <p>Giữ và kéo dấu + − × ÷ hoặc dấu = để dời cả phép tính sang chỗ khác.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="grp">
+        <div class="grp__h"><span aria-hidden="true">03</span><h3>Ghi chú và bố cục</h3></div>
+        <ul class="feats">
+          <li class="feat">
+            <div class="feat__clip cut"><img src="./static/gif/vi-f4.gif" width="546" height="285" loading="lazy" decoding="async" alt="Ghi chú trên từng số"></div>
+            <h4>Ghi chú trên từng số</h4>
+            <p>Bấm nút ghi chú rồi gõ tên như “đơn giá”, “số lượng” ngay trên số.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="./static/gif/vi-f10.gif" width="546" height="285" loading="lazy" decoding="async" alt="Vuốt cột phép tính để thu phóng"></div>
+            <h4>Vuốt cột phép tính để thu phóng</h4>
+            <p>Đặt ngón tay lên cột + − × ÷, vuốt lên để phóng to, vuốt xuống để thu nhỏ cả bảng tính.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="./static/gif/vi-f14.gif" width="546" height="285" loading="lazy" decoding="async" alt="Vuốt bàn phím để chỉnh khoảng cách"></div>
+            <h4>Vuốt bàn phím để chỉnh khoảng cách</h4>
+            <p>Vuốt ngang hàng phím trên cùng để giãn khoảng cách giữa các số. Vuốt dọc cột phím bên trái để giãn khoảng cách giữa các dòng.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="./static/gif/vi-f6.gif" width="546" height="285" loading="lazy" decoding="async" alt="Tùy chỉnh theo ý bạn"></div>
+            <h4>Tùy chỉnh theo ý bạn</h4>
+            <p>Đổi màu, phông chữ, cỡ chữ, ngôn ngữ, giao diện tối và bàn phím tay trái.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="grp">
+        <div class="grp__h"><span aria-hidden="true">04</span><h3>Chụp và chia sẻ</h3></div>
+        <ul class="feats">
+          <li class="feat">
+            <div class="feat__clip cut"><img src="./static/gif/vi-f5.gif" width="546" height="285" loading="lazy" decoding="async" alt="Chụp màn hình gọn gàng"></div>
+            <h4>Chụp màn hình gọn gàng</h4>
+            <p>Chụp toàn màn hình, một vùng tự vẽ, hoặc chỉ những dòng bạn chọn.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="./static/gif/vi-f8.gif" width="546" height="285" loading="lazy" decoding="async" alt="Chụp đúng những dòng cần"></div>
+            <h4>Chụp đúng những dòng cần</h4>
+            <p>Chọn các dòng dù nằm cách xa nhau, ảnh sẽ ghép chúng sát lại với nhau.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="./static/gif/vi-f15.gif" width="546" height="285" loading="lazy" decoding="async" alt="Gửi ảnh thẳng qua mạng xã hội"></div>
+            <h4>Gửi ảnh thẳng qua mạng xã hội</h4>
+            <p>Chụp xong, lưu ảnh vào máy hoặc gửi ngay qua Zalo, WhatsApp, Viber, Telegram, Messenger.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="languages" aria-labelledby="h-lang">
+    <div class="container">
+      <div class="sec__head">
+        <h2 id="h-lang">12 ngôn ngữ, viết số đúng kiểu từng nơi</h2>
+        <p class="lead">Dấu hàng nghìn và dấu thập phân đổi theo ngôn ngữ. Muốn kiểu khác thì chọn trong Cài đặt.</p>
+      </div>
+      <ul class="langs"><li><a href="" hreflang="vi" lang="vi" data-lang="vi" aria-current="page"><span class="flag" aria-hidden="true">🇻🇳</span><strong>Tiếng Việt</strong></a></li><li><a href="en/" hreflang="en" lang="en" data-lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><strong>English</strong></a></li><li><a href="zh/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh"><span class="flag" aria-hidden="true">🇨🇳</span><strong>中文（简体）</strong></a></li><li><a href="ja/" hreflang="ja" lang="ja" data-lang="ja"><span class="flag" aria-hidden="true">🇯🇵</span><strong>日本語</strong></a></li><li><a href="ko/" hreflang="ko" lang="ko" data-lang="ko"><span class="flag" aria-hidden="true">🇰🇷</span><strong>한국어</strong></a></li><li><a href="es/" hreflang="es" lang="es" data-lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><strong>Español</strong></a></li><li><a href="pt/" hreflang="pt" lang="pt" data-lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><strong>Português</strong></a></li><li><a href="fr/" hreflang="fr" lang="fr" data-lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><strong>Français</strong></a></li><li><a href="de/" hreflang="de" lang="de" data-lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><strong>Deutsch</strong></a></li><li><a href="ru/" hreflang="ru" lang="ru" data-lang="ru"><span class="flag" aria-hidden="true">🇷🇺</span><strong>Русский</strong></a></li><li><a href="th/" hreflang="th" lang="th" data-lang="th"><span class="flag" aria-hidden="true">🇹🇭</span><strong>ไทย</strong></a></li><li><a href="id/" hreflang="id" lang="id" data-lang="id"><span class="flag" aria-hidden="true">🇮🇩</span><strong>Bahasa Indonesia</strong></a></li></ul>
+    </div>
+  </section>
+
+  <section class="sec theme-sec" id="themes" aria-labelledby="h-themes">
+    <div class="container">
+      <div class="theme-layout">
+        <div class="theme-text">
+          <h2 id="h-themes">Giao diện sáng và tối</h2>
+          <p class="lead">Chuyển giữa giao diện sáng và tối ngay trong ứng dụng. Mắt dễ chịu dù bạn đang ở đâu.</p>
+          <div class="theme-toggle" role="group">
+            <button class="theme-btn theme-btn--light is-active" data-theme="light">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+              Sáng
+            </button>
+            <button class="theme-btn theme-btn--dark" data-theme="dark">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              Tối
+            </button>
+          </div>
+        </div>
+        <div class="theme-preview">
+          <div class="theme-mockup" id="theme-mockup" data-active="light">
+            <img class="tm-light" src="./static/shots/ui/vi-light.webp" width="780" height="1600" loading="lazy" decoding="async" alt="Sáng – Calc SmartX">
+            <img class="tm-dark" src="./static/shots/ui/vi-dark.webp" width="780" height="1600" loading="lazy" decoding="async" alt="Tối – Calc SmartX">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec device-sec" id="devices" aria-labelledby="h-devices">
+    <div class="container">
+      <div class="sec__head">
+        <h2 id="h-devices">Dùng tốt trên mọi thiết bị</h2>
+        <p class="lead">Giao diện tự điều chỉnh theo kích thước màn hình — điện thoại, máy tính bảng hay điện thoại gập.</p>
+      </div>
+      <div class="devices">
+        <figure class="dev dev-phone">
+          <div class="dev-shell"><img class="dev-img" src="./static/shots/ui/vi-light.webp" width="780" height="1600" loading="lazy" decoding="async" alt="Điện thoại – Calc SmartX"></div>
+          <figcaption>Điện thoại</figcaption>
+        </figure>
+        <figure class="dev dev-fold">
+          <button type="button" class="fold is-closed" id="fold" aria-label="Điện thoại gập">
+            <span class="fold__half fold__right"><img src="./static/shots/ui/vi-fold-open.webp" width="1500" height="1664" loading="lazy" decoding="async" alt="Điện thoại gập – Calc SmartX"></span>
+            <span class="fold__flap">
+              <span class="fold__face fold__front"><img src="./static/shots/ui/vi-fold-open.webp" width="1500" height="1664" loading="lazy" decoding="async" alt=""></span>
+              <span class="fold__face fold__back"><img src="./static/shots/ui/vi-fold-cover.webp" width="824" height="1920" loading="lazy" decoding="async" alt=""></span>
+            </span>
+          </button>
+          <figcaption>Điện thoại gập</figcaption>
+        </figure>
+        <figure class="dev dev-tablet">
+          <div class="dev-shell"><img class="dev-img" src="./static/shots/ui/vi-tablet.webp" width="1707" height="1068" loading="lazy" decoding="async" alt="Máy tính bảng – Calc SmartX"></div>
+          <figcaption>Máy tính bảng</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec faq-sec" id="faq" aria-labelledby="h-faq">
+    <div class="container">
+      <div class="sec__head">
+        <h2 id="h-faq">Câu hỏi thường gặp</h2>
+      </div>
+      <dl class="faq">
+        <div class="faq__item">
+          <dt><button class="faq__q" aria-expanded="false">App có miễn phí không?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></dt>
+          <dd class="faq__a" hidden>Calc SmartX miễn phí hoàn toàn, không quảng cáo, không mua thêm trong app.</dd>
+        </div>
+        <div class="faq__item">
+          <dt><button class="faq__q" aria-expanded="false">Có dùng được khi không có mạng không?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></dt>
+          <dd class="faq__a" hidden>Có. App tính toán hoàn toàn trên máy, không cần kết nối internet.</dd>
+        </div>
+        <div class="faq__item">
+          <dt><button class="faq__q" aria-expanded="false">App có trên iOS không?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></dt>
+          <dd class="faq__a" hidden>Hiện tại Calc SmartX có trên Android. Phiên bản iOS đang trong kế hoạch phát triển.</dd>
+        </div>
+        <div class="faq__item">
+          <dt><button class="faq__q" aria-expanded="false">Tôi có thể dùng bao nhiêu hàng trong bảng?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></dt>
+          <dd class="faq__a" hidden>Không giới hạn số hàng. Bảng tính có thể dài bao nhiêu tuỳ bạn.</dd>
+        </div>
+        <div class="faq__item">
+          <dt><button class="faq__q" aria-expanded="false">Dữ liệu của tôi có được lưu không?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></dt>
+          <dd class="faq__a" hidden>Dữ liệu được lưu trực tiếp trên thiết bị của bạn, không gửi lên máy chủ nào.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="soon-sec" id="soon" aria-labelledby="h-soon">
+    <div class="container">
+      <div class="soon__panel">
+        <div class="soon__icon"><img src="./static/logo.svg" alt="" width="72" height="72"></div>
+        <div class="soon__body">
+          <h2 id="h-soon">Sắp ra mắt</h2>
+          <p>Calc SmartX đang trong giai đoạn hoàn thiện. Đăng ký để nhận thông báo khi app lên Google Play.</p>
+          <form class="soon__form" action="https://formspree.io/f/xvgrzojn" method="POST" novalidate>
+            <input type="email" name="email" required placeholder="your@email.com" autocomplete="email">
+            <button type="submit" class="key key--primary">Nhận thông báo</button>
+          </form>
+          <p class="soon__note">Chúng tôi chỉ gửi một email khi app ra mắt. Không spam.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dl" aria-labelledby="h-dl">
+    <div class="container">
+      <div class="dl__panel">
+        <div class="gfield" aria-hidden="true"></div>
+        <h2 id="h-dl">Sắp ra mắt</h2>
+        <p>Calc SmartX đang trong giai đoạn hoàn thiện. Đăng ký để nhận thông báo khi app lên Google Play.</p>
+        <div class="dl__act"><img src="./static/logo.svg" alt="" width="88" height="88">
+          <form class="soon__form soon__form--inline" action="https://formspree.io/f/xvgrzojn" method="POST" novalidate>
+            <input type="email" name="email" required placeholder="your@email.com" autocomplete="email">
+            <button type="submit" class="key key--primary">Nhận thông báo</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="container">
+    <div class="foot__mast">
+      <a class="brand" href=""><img src="./static/logo.svg" alt="" width="48" height="48">Calc SmartX</a>
+      <p>Máy tính dạng bảng, liên kết số.</p>
+    </div>
+    <div class="foot__row">
+      <span>© 2026 Calc SmartX</span>
+      <span>Android</span>
+    </div>
+  </div>
+</footer>
+<script src="./static/js/site.js" defer></script>
+</body>
+</html>

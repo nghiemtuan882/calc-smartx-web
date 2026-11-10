@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="ko" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calc SmartX: 숫자 하나 고치면 표 전체가 다시 계산되는 계산기</title>
+<meta name="description" content="Calc SmartX는 표처럼 쓰는 계산기입니다. 숫자 하나를 고치면 관련된 결과가 모두 다시 계산됩니다. 숫자마다 메모, 깔끔한 스크린샷, 12개 언어.">
+<link rel="canonical" href="https://nghiemtuan882.github.io/calc-smartx-web/ko/">
+<link rel="alternate" hreflang="vi" href="https://nghiemtuan882.github.io/calc-smartx-web/">
+<link rel="alternate" hreflang="en" href="https://nghiemtuan882.github.io/calc-smartx-web/en/">
+<link rel="alternate" hreflang="zh-Hans" href="https://nghiemtuan882.github.io/calc-smartx-web/zh/">
+<link rel="alternate" hreflang="ja" href="https://nghiemtuan882.github.io/calc-smartx-web/ja/">
+<link rel="alternate" hreflang="ko" href="https://nghiemtuan882.github.io/calc-smartx-web/ko/">
+<link rel="alternate" hreflang="es" href="https://nghiemtuan882.github.io/calc-smartx-web/es/">
+<link rel="alternate" hreflang="pt" href="https://nghiemtuan882.github.io/calc-smartx-web/pt/">
+<link rel="alternate" hreflang="fr" href="https://nghiemtuan882.github.io/calc-smartx-web/fr/">
+<link rel="alternate" hreflang="de" href="https://nghiemtuan882.github.io/calc-smartx-web/de/">
+<link rel="alternate" hreflang="ru" href="https://nghiemtuan882.github.io/calc-smartx-web/ru/">
+<link rel="alternate" hreflang="th" href="https://nghiemtuan882.github.io/calc-smartx-web/th/">
+<link rel="alternate" hreflang="id" href="https://nghiemtuan882.github.io/calc-smartx-web/id/">
+<link rel="alternate" hreflang="x-default" href="https://nghiemtuan882.github.io/calc-smartx-web/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calc SmartX: 숫자 하나 고치면 표 전체가 다시 계산되는 계산기">
+<meta property="og:description" content="Calc SmartX는 표처럼 쓰는 계산기입니다. 숫자 하나를 고치면 관련된 결과가 모두 다시 계산됩니다. 숫자마다 메모, 깔끔한 스크린샷, 12개 언어.">
+<meta property="og:url" content="https://nghiemtuan882.github.io/calc-smartx-web/ko/">
+<meta property="og:image" content="https://nghiemtuan882.github.io/calc-smartx-web/static/og.png">
+<meta property="og:locale" content="ko">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f7f9fc">
+<link rel="icon" href="../static/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../static/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600&family=Roboto:wght@300;400;500&family=IBM+Plex+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../static/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Calc SmartX","operatingSystem":"Android","applicationCategory":"UtilitiesApplication","softwareVersion":"1.2","inLanguage":"ko","description":"Calc SmartX는 표처럼 쓰는 계산기입니다. 숫자 하나를 고치면 관련된 결과가 모두 다시 계산됩니다. 숫자마다 메모, 깔끔한 스크린샷, 12개 언어.","url":"https://nghiemtuan882.github.io/calc-smartx-web/ko/","image":"https://nghiemtuan882.github.io/calc-smartx-web/static/logo-512.png"}</script>
+
+</head>
+<body>
+<div id="splash" aria-hidden="true">
+  <div class="splash__ring"><img src="../static/logo.svg" alt="Calc SmartX" width="72" height="72"></div>
+  <div class="splash__name">Calc SmartX</div>
+  <div class="splash__bar-wrap"><div class="splash__bar"></div></div>
+</div>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="nav">
+  <div class="container nav__in">
+    <a class="brand" href="../ko/"><img src="../static/logo.svg" alt="" width="52" height="52">Calc SmartX</a>
+    <nav class="nav__links" aria-label="Calc SmartX">
+      <a href="#features">기능</a>
+      <a href="#example">예시</a>
+      <a href="#languages">언어</a>
+    </nav>
+    <div class="nav__end">
+      <label class="langsel"><span class="langsel__lbl">언어</span><span class="langsel__flag" aria-hidden="true">🇰🇷</span><select id="langsel"><option value="vi" data-href="../">Tiếng Việt</option><option value="en" data-href="../en/">English</option><option value="zh" data-href="../zh/">中文（简体）</option><option value="ja" data-href="../ja/">日本語</option><option value="ko" data-href="../ko/" selected>한국어</option><option value="es" data-href="../es/">Español</option><option value="pt" data-href="../pt/">Português</option><option value="fr" data-href="../fr/">Français</option><option value="de" data-href="../de/">Deutsch</option><option value="ru" data-href="../ru/">Русский</option><option value="th" data-href="../th/">ไทย</option><option value="id" data-href="../id/">Bahasa Indonesia</option></select><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></label>
+      <span class="nav__soon">출시 예정</span>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="h1">
+    <canvas class="field" aria-hidden="true"></canvas>
+    <div class="container hero__in">
+      <div class="hero__text">
+        <h1 id="h1">숫자 하나 고치면 표가 따라와요</h1>
+        <p class="lead">숫자마다 메모를 달 수 있는 표 계산기.</p>
+        <div class="hero__acts"><span class="hero__soon-badge">출시 예정</span></div>
+      </div>
+      <div class="hero__sheet">
+        <p class="try" id="try">직접 해 보기: 숫자 키로 수량 바꾸기</p>
+        <div class="phone" id="sheet" data-ex="{&quot;price&quot;:150000,&quot;qty&quot;:3,&quot;vat&quot;:10,&quot;parts&quot;:3,&quot;fee&quot;:50000,&quot;cur&quot;:&quot;₩&quot;,&quot;sep&quot;:&quot;comma&quot;}" role="group" aria-labelledby="try">
+          <div class="ph__top" aria-hidden="true">
+            <span class="ph__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 14 5-5-5-5"/><path d="M20 9H9.5a5.5 5.5 0 0 0 0 11H13"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="heart"><path d="M12 20s-7.5-4.6-9.2-9.4C1.7 7.4 3.8 4 7.2 4c2 0 3.5 1.1 4.8 2.8C13.3 5.1 14.8 4 16.8 4c3.4 0 5.5 3.4 4.4 6.6C19.5 15.4 12 20 12 20z"/></svg></span>
+            <span class="ph__brand"><svg class="spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5C12.7 7.3 16.7 11.3 22.5 12C16.7 12.7 12.7 16.7 12 22.5C11.3 16.7 7.3 12.7 1.5 12C7.3 11.3 11.3 7.3 12 1.5Z" fill="currentColor"/></svg>Calc SmartX</span>
+            <span class="ph__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7.5 7.5 4.5-4.5 4.5 4.5"/><path d="M5 12v6.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V12"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8.5A1.5 1.5 0 0 1 5.5 7h2l1.5-2h6l1.5 2h2A1.5 1.5 0 0 1 20 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 17.5z"/><circle cx="12" cy="13" r="3.5"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span>
+          </div>
+          <div class="ph__sheet" aria-live="polite">
+            <div class="ln"><span class="t"><small>단가</small><b>150,000</b></span><span class="t o"><b>×</b></span><span class="t c3 box"><small>수량</small><b data-v="qty">3</b></span><span class="t o"><b>=</b></span><span class="t c1 box"><small>금액</small><b data-v="amount">450,000</b></span></div>
+            <div class="ln"><span class="t c1"><small>금액</small><b data-v="amount">450,000</b></span><span class="t o"><b>+</b></span><span class="t"><b>10</b></span><span class="t o"><b>%</b></span><span class="t o"><b>=</b></span><span class="t c2 box"><small>부가세 포함</small><b data-v="vat">495,000</b></span></div>
+            <div class="ln"><span class="t c2"><small>부가세 포함</small><b data-v="vat">495,000</b></span><span class="t o"><b>÷</b></span><span class="t"><small>납부 횟수</small><b>3</b></span><span class="t o"><b>=</b></span><span class="t"><small>회당</small><b data-v="each">165,000</b></span></div>
+            <div class="ln"><span class="t"><small>설치비</small><b>50,000</b></span><span class="t o"><b>×</b></span><span class="t c3"><small>수량</small><b data-v="qty">3</b></span><span class="t o"><b>=</b></span><span class="t"><small>총비용</small><b data-v="total">150,000</b></span></div>
+          </div>
+          <div class="ph__pad"><button type="button" class="k tl" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><button type="button" class="k tl" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6a1 1 0 0 1 1 1v1H8V5a1 1 0 0 1 1-1z"/><path d="M16 5h1.5A1.5 1.5 0 0 1 19 6.5V11M8 5H6.5A1.5 1.5 0 0 0 5 6.5v12A1.5 1.5 0 0 0 6.5 20H11"/><path d="m14 20 .5-2.5 5-5 2 2-5 5z"/></svg></button><button type="button" class="k tl" data-k="clear"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16"/><path d="M10 11v6M14 11v6"/><path d="M5.5 7l1 12a1.5 1.5 0 0 0 1.5 1.4h8a1.5 1.5 0 0 0 1.5-1.4l1-12"/><path d="M9 7V4.5h6V7"/></svg></button><button type="button" class="k tl" data-k="bs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5h10.5A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5H9l-6-7z"/><path d="m11 9 6 6M17 9l-6 6"/></svg></button><button type="button" class="k op" tabindex="-1" aria-hidden="true">÷</button><button type="button" class="k tl" tabindex="-1" aria-hidden="true">(</button><button type="button" class="k " data-k="7">7</button><button type="button" class="k " data-k="8">8</button><button type="button" class="k " data-k="9">9</button><button type="button" class="k op" tabindex="-1" aria-hidden="true">×</button><button type="button" class="k tl" tabindex="-1" aria-hidden="true">)</button><button type="button" class="k " data-k="4">4</button><button type="button" class="k " data-k="5">5</button><button type="button" class="k " data-k="6">6</button><button type="button" class="k op" tabindex="-1" aria-hidden="true">−</button><button type="button" class="k tl" tabindex="-1" aria-hidden="true">%</button><button type="button" class="k " data-k="1">1</button><button type="button" class="k " data-k="2">2</button><button type="button" class="k " data-k="3">3</button><button type="button" class="k op" tabindex="-1" aria-hidden="true">+</button><button type="button" class="k tl" tabindex="-1" aria-hidden="true">±</button><button type="button" class="k " tabindex="-1" aria-hidden="true">.</button><button type="button" class="k k000" data-k="000">000</button><button type="button" class="k " data-k="0">0</button><button type="button" class="k op" tabindex="-1" aria-hidden="true">=</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="example" aria-labelledby="h-ex">
+    <div class="container ex">
+      <figure class="ex__shot cut" style="margin:0"><img src="../static/shots/ko.webp" width="824" height="1560" loading="lazy" decoding="async" alt="한국어 예시 표를 보여 주는 Calc SmartX"></figure>
+      <div class="ex__body">
+        <h2 id="h-ex">한국어로 만든 실제 표</h2>
+        <p>Calc SmartX 스크린샷입니다. 단가는 ₩, 부가세 10 %를 더해 3회로 나눠 냅니다. 수량을 바꾸면 네 줄이 모두 바뀝니다.</p>
+        <div class="ledger-wrap">
+          <table class="ledger">
+            <thead><tr><th scope="col">계산식</th><th scope="col">결과</th><th scope="col">메모</th></tr></thead>
+            <tbody><tr><td class="m">150,000 × 3</td><td class="m">450,000</td><td>단가 × 수량 = 금액</td></tr><tr class="hit"><td class="m">450,000 + 10 %</td><td class="m">495,000</td><td>부가세 포함</td></tr><tr><td class="m">495,000 ÷ 3</td><td class="m">165,000</td><td>회당 (납부 횟수: 3)</td></tr><tr><td class="m">50,000 × 3</td><td class="m">150,000</td><td>설치비 × 수량 = 총비용</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="features" aria-labelledby="h-feat">
+    <div class="container">
+      <div class="sec__head">
+        <h2 id="h-feat">15가지 기능을 직접 보세요</h2>
+        <p class="lead">모든 영상은 앱에서 직접, 이 페이지와 같은 언어로 녹화했습니다.</p>
+      </div>
+      
+      <div class="grp">
+        <div class="grp__h"><span aria-hidden="true">01</span><h3>연결된 계산</h3></div>
+        <ul class="feats">
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/ko-f1.gif" width="546" height="285" loading="lazy" decoding="async" alt="숫자를 고치면 결과도 바뀌어요"></div>
+            <h4>숫자를 고치면 결과도 바뀌어요</h4>
+            <p>아무 숫자나 눌러 고치세요. 관련된 결과가 모두 다시 계산됩니다.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/ko-f2.gif" width="546" height="285" loading="lazy" decoding="async" alt="결과에서 이어서 계산"></div>
+            <h4>결과에서 이어서 계산</h4>
+            <p>결과를 누르고 + − × ÷. 새 줄은 그 결과와 연결됩니다.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/ko-f3.gif" width="546" height="285" loading="lazy" decoding="async" alt="끌어서 연결"></div>
+            <h4>끌어서 연결</h4>
+            <p>숫자를 길게 눌러 끌면 손가락 위에 작은 카드가 나타납니다. 숫자 위에 놓으면 바뀌고, 마지막 줄 아래에 놓으면 새 줄이 됩니다.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/ko-f7.gif" width="546" height="285" loading="lazy" decoding="async" alt="숫자를 눌러 연결"></div>
+            <h4>숫자를 눌러 연결</h4>
+            <p>연산자를 누른 뒤 위쪽의 아무 숫자나 누르면 연결된 채로 들어갑니다.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/ko-f11.gif" width="546" height="285" loading="lazy" decoding="async" alt="기호를 눌러 바꾸기"></div>
+            <h4>기호를 눌러 바꾸기</h4>
+            <p>계산식의 + − × ÷ 를 누르고 다른 기호를 고르면 결과가 바로 다시 계산됩니다.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="grp">
+        <div class="grp__h"><span aria-hidden="true">02</span><h3>빠른 입력과 수정</h3></div>
+        <ul class="feats">
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/ko-f12.gif" width="546" height="285" loading="lazy" decoding="async" alt="똑똑한 ⌫"></div>
+            <h4>똑똑한 ⌫</h4>
+            <p>⌫ 를 누르면 기호까지 한 글자씩 지워집니다. 답을 선택한 상태에서는 마지막 숫자로 이동해 고칠 수 있습니다. ⌫ 를 길게 누르면 줄 전체를 지웁니다.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/ko-f13.gif" width="546" height="285" loading="lazy" decoding="async" alt="000 키로 금액 빠르게 입력"></div>
+            <h4>000 키로 금액 빠르게 입력</h4>
+            <p>12를 입력하고 000을 두 번 누르면 12,000,000이 됩니다. 0을 여섯 번 누를 필요가 없습니다.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/ko-f9.gif" width="546" height="285" loading="lazy" decoding="async" alt="연산자를 끌어 이동"></div>
+            <h4>연산자를 끌어 이동</h4>
+            <p>+ − × ÷ 또는 = 를 누른 채 끌면 계산 전체가 옮겨집니다.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="grp">
+        <div class="grp__h"><span aria-hidden="true">03</span><h3>메모와 배치</h3></div>
+        <ul class="feats">
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/ko-f4.gif" width="546" height="285" loading="lazy" decoding="async" alt="숫자마다 메모"></div>
+            <h4>숫자마다 메모</h4>
+            <p>메모 키를 누르고 숫자 바로 위에 ‘단가’, ‘수량’ 같은 이름을 입력하세요.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/ko-f10.gif" width="546" height="285" loading="lazy" decoding="async" alt="연산자 열을 밀어 확대·축소"></div>
+            <h4>연산자 열을 밀어 확대·축소</h4>
+            <p>+ − × ÷ 열에 손가락을 대고 위로 밀면 확대, 아래로 밀면 축소됩니다.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/ko-f14.gif" width="546" height="285" loading="lazy" decoding="async" alt="키패드를 밀어 간격 조절"></div>
+            <h4>키패드를 밀어 간격 조절</h4>
+            <p>맨 윗줄을 좌우로 밀면 숫자 간격, 왼쪽 열을 위아래로 밀면 줄 간격을 조절합니다.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/ko-f6.gif" width="546" height="285" loading="lazy" decoding="async" alt="나에게 맞게"></div>
+            <h4>나에게 맞게</h4>
+            <p>색상, 글꼴, 글자 크기, 언어, 다크 모드, 왼손 키패드를 바꾸세요.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="grp">
+        <div class="grp__h"><span aria-hidden="true">04</span><h3>캡처와 공유</h3></div>
+        <ul class="feats">
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/ko-f5.gif" width="546" height="285" loading="lazy" decoding="async" alt="깔끔한 스크린샷"></div>
+            <h4>깔끔한 스크린샷</h4>
+            <p>전체 화면, 직접 그린 영역, 고른 줄만 찍을 수 있어요.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/ko-f8.gif" width="546" height="285" loading="lazy" decoding="async" alt="필요한 줄만 찍기"></div>
+            <h4>필요한 줄만 찍기</h4>
+            <p>멀리 떨어진 줄도 고를 수 있고, 이미지에서는 나란히 붙여 줍니다.</p>
+          </li>
+          <li class="feat">
+            <div class="feat__clip cut"><img src="../static/gif/ko-f15.gif" width="546" height="285" loading="lazy" decoding="async" alt="메신저로 바로 이미지 보내기"></div>
+            <h4>메신저로 바로 이미지 보내기</h4>
+            <p>캡처한 뒤 이미지를 저장하거나 Zalo, WhatsApp, Viber, Telegram, Messenger로 바로 보낼 수 있습니다.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="languages" aria-labelledby="h-lang">
+    <div class="container">
+      <div class="sec__head">
+        <h2 id="h-lang">12개 언어, 숫자는 그 나라 방식대로</h2>
+        <p class="lead">천 단위 구분 기호와 소수점이 언어에 맞게 바뀝니다. 설정에서 다른 방식도 고를 수 있어요.</p>
+      </div>
+      <ul class="langs"><li><a href="../" hreflang="vi" lang="vi" data-lang="vi"><span class="flag" aria-hidden="true">🇻🇳</span><strong>Tiếng Việt</strong></a></li><li><a href="../en/" hreflang="en" lang="en" data-lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><strong>English</strong></a></li><li><a href="../zh/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh"><span class="flag" aria-hidden="true">🇨🇳</span><strong>中文（简体）</strong></a></li><li><a href="../ja/" hreflang="ja" lang="ja" data-lang="ja"><span class="flag" aria-hidden="true">🇯🇵</span><strong>日本語</strong></a></li><li><a href="../ko/" hreflang="ko" lang="ko" data-lang="ko" aria-current="page"><span class="flag" aria-hidden="true">🇰🇷</span><strong>한국어</strong></a></li><li><a href="../es/" hreflang="es" lang="es" data-lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><strong>Español</strong></a></li><li><a href="../pt/" hreflang="pt" lang="pt" data-lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><strong>Português</strong></a></li><li><a href="../fr/" hreflang="fr" lang="fr" data-lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><strong>Français</strong></a></li><li><a href="../de/" hreflang="de" lang="de" data-lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><strong>Deutsch</strong></a></li><li><a href="../ru/" hreflang="ru" lang="ru" data-lang="ru"><span class="flag" aria-hidden="true">🇷🇺</span><strong>Русский</strong></a></li><li><a href="../th/" hreflang="th" lang="th" data-lang="th"><span class="flag" aria-hidden="true">🇹🇭</span><strong>ไทย</strong></a></li><li><a href="../id/" hreflang="id" lang="id" data-lang="id"><span class="flag" aria-hidden="true">🇮🇩</span><strong>Bahasa Indonesia</strong></a></li></ul>
+    </div>
+  </section>
+
+  <section class="sec theme-sec" id="themes" aria-labelledby="h-themes">
+    <div class="container">
+      <div class="theme-layout">
+        <div class="theme-text">
+          <h2 id="h-themes">라이트 &amp; 다크 모드</h2>
+          <p class="lead">앱 안에서 라이트와 다크 테마를 바로 전환할 수 있어요. 어디서든 눈이 편안합니다.</p>
+          <div class="theme-toggle" role="group">
+            <button class="theme-btn theme-btn--light is-active" data-theme="light">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+              라이트
+            </button>
+            <button class="theme-btn theme-btn--dark" data-theme="dark">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              다크
+            </button>
+          </div>
+        </div>
+        <div class="theme-preview">
+          <div class="theme-mockup" id="theme-mockup" data-active="light">
+            <img class="tm-light" src="../static/shots/ui/ko-light.webp" width="780" height="1600" loading="lazy" decoding="async" alt="라이트 – Calc SmartX">
+            <img class="tm-dark" src="../static/shots/ui/ko-dark.webp" width="780" height="1600" loading="lazy" decoding="async" alt="다크 – Calc SmartX">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec device-sec" id="devices" aria-labelledby="h-devices">
+    <div class="container">
+      <div class="sec__head">
+        <h2 id="h-devices">모든 기기에서 완벽하게</h2>
+        <p class="lead">화면 크기에 맞게 인터페이스가 자동 조정됩니다 — 스마트폰, 태블릿, 폴더블 모두 지원.</p>
+      </div>
+      <div class="devices">
+        <figure class="dev dev-phone">
+          <div class="dev-shell"><img class="dev-img" src="../static/shots/ui/ko-light.webp" width="780" height="1600" loading="lazy" decoding="async" alt="스마트폰 – Calc SmartX"></div>
+          <figcaption>스마트폰</figcaption>
+        </figure>
+        <figure class="dev dev-fold">
+          <button type="button" class="fold is-closed" id="fold" aria-label="폴더블">
+            <span class="fold__half fold__right"><img src="../static/shots/ui/ko-fold-open.webp" width="1500" height="1664" loading="lazy" decoding="async" alt="폴더블 – Calc SmartX"></span>
+            <span class="fold__flap">
+              <span class="fold__face fold__front"><img src="../static/shots/ui/ko-fold-open.webp" width="1500" height="1664" loading="lazy" decoding="async" alt=""></span>
+              <span class="fold__face fold__back"><img src="../static/shots/ui/ko-fold-cover.webp" width="824" height="1920" loading="lazy" decoding="async" alt=""></span>
+            </span>
+          </button>
+          <figcaption>폴더블</figcaption>
+        </figure>
+        <figure class="dev dev-tablet">
+          <div class="dev-shell"><img class="dev-img" src="../static/shots/ui/ko-tablet.webp" width="1707" height="1068" loading="lazy" decoding="async" alt="태블릿 – Calc SmartX"></div>
+          <figcaption>태블릿</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec faq-sec" id="faq" aria-labelledby="h-faq">
+    <div class="container">
+      <div class="sec__head">
+        <h2 id="h-faq">자주 묻는 질문</h2>
+      </div>
+      <dl class="faq">
+        <div class="faq__item">
+          <dt><button class="faq__q" aria-expanded="false">앱이 무료인가요?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></dt>
+          <dd class="faq__a" hidden>Calc SmartX는 완전 무료입니다. 광고도 인앱 결제도 없습니다.</dd>
+        </div>
+        <div class="faq__item">
+          <dt><button class="faq__q" aria-expanded="false">인터넷 없이도 쓸 수 있나요?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></dt>
+          <dd class="faq__a" hidden>네. 모든 계산은 기기에서 직접 이루어지며 인터넷 연결이 필요하지 않습니다.</dd>
+        </div>
+        <div class="faq__item">
+          <dt><button class="faq__q" aria-expanded="false">iOS 버전도 있나요?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></dt>
+          <dd class="faq__a" hidden>현재는 Android 버전만 제공합니다. iOS 버전은 개발 계획 중입니다.</dd>
+        </div>
+        <div class="faq__item">
+          <dt><button class="faq__q" aria-expanded="false">시트에 행이 몇 개까지 가능한가요?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></dt>
+          <dd class="faq__a" hidden>행 수 제한이 없습니다. 필요한 만큼 추가할 수 있습니다.</dd>
+        </div>
+        <div class="faq__item">
+          <dt><button class="faq__q" aria-expanded="false">데이터가 저장되나요?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></dt>
+          <dd class="faq__a" hidden>데이터는 기기에만 저장되며 어떤 서버로도 전송되지 않습니다.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="soon-sec" id="soon" aria-labelledby="h-soon">
+    <div class="container">
+      <div class="soon__panel">
+        <div class="soon__icon"><img src="../static/logo.svg" alt="" width="72" height="72"></div>
+        <div class="soon__body">
+          <h2 id="h-soon">출시 예정</h2>
+          <p>Calc SmartX는 최종 개발 단계에 있습니다. Google Play 출시 시 알림을 받으려면 등록하세요.</p>
+          <form class="soon__form" action="https://formspree.io/f/xvgrzojn" method="POST" novalidate>
+            <input type="email" name="email" required placeholder="your@email.com" autocomplete="email">
+            <button type="submit" class="key key--primary">알림 받기</button>
+          </form>
+          <p class="soon__note">출시 때 이메일 한 통만 발송합니다. 스팸은 없습니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dl" aria-labelledby="h-dl">
+    <div class="container">
+      <div class="dl__panel">
+        <div class="gfield" aria-hidden="true"></div>
+        <h2 id="h-dl">출시 예정</h2>
+        <p>Calc SmartX는 최종 개발 단계에 있습니다. Google Play 출시 시 알림을 받으려면 등록하세요.</p>
+        <div class="dl__act"><img src="../static/logo.svg" alt="" width="88" height="88">
+          <form class="soon__form soon__form--inline" action="https://formspree.io/f/xvgrzojn" method="POST" novalidate>
+            <input type="email" name="email" required placeholder="your@email.com" autocomplete="email">
+            <button type="submit" class="key key--primary">알림 받기</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="container">
+    <div class="foot__mast">
+      <a class="brand" href="../ko/"><img src="../static/logo.svg" alt="" width="48" height="48">Calc SmartX</a>
+      <p>숫자가 연결되는 표 계산기.</p>
+    </div>
+    <div class="foot__row">
+      <span>© 2026 Calc SmartX</span>
+      <span>Android</span>
+    </div>
+  </div>
+</footer>
+<script src="../static/js/site.js" defer></script>
+</body>
+</html>

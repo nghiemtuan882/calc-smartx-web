@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nghiemtuan882.github.io/calc-smartx-web/sitemap.xml
