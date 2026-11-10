@@ -140,7 +140,7 @@ function page(code) {
   const ld = {
     '@context': 'https://schema.org', '@type': 'MobileApplication', name: 'Calc SmartX', operatingSystem: 'Android',
     applicationCategory: 'UtilitiesApplication', softwareVersion: VERSION, inLanguage: T.html, description: T.desc,
-    url: abs(code), installUrl: `https://play.google.com/store/apps/details?id=${APP_ID}`, image: SITE + 'static/logo-512.png',
+    url: abs(code), image: SITE + 'static/logo-512.png',
   };
 
   return `<!doctype html>
@@ -181,7 +181,7 @@ ${code === DEFAULT ? `<script>try{var l=localStorage.getItem('csx-lang');if(l&&l
     </nav>
     <div class="nav__end">
       <label class="langsel"><span class="langsel__lbl">${esc(T.lang)}</span><span class="langsel__flag" aria-hidden="true">${FLAGS[code]}</span><select id="langsel">${langOptions}</select>${ICON.chev}</label>
-      <a class="key key--primary key--sm nav__cta" href="${play}" rel="noopener">${esc(T.cta)}</a>
+      <span class="nav__soon">${esc(T.soon_h)}</span>
     </div>
   </div>
 </header>
@@ -193,7 +193,7 @@ ${code === DEFAULT ? `<script>try{var l=localStorage.getItem('csx-lang');if(l&&l
       <div class="hero__text">
         <h1 id="h1">${esc(T.hero_h)}</h1>
         <p class="lead">${esc(T.hero_p)}</p>
-        <div class="hero__acts">${playKey()}</div>
+        <div class="hero__acts"><span class="hero__soon-badge">${esc(T.soon_h)}</span></div>
       </div>
       <div class="hero__sheet">
         <p class="try" id="try">${esc(T.try)}</p>
@@ -398,9 +398,14 @@ ${code === DEFAULT ? `<script>try{var l=localStorage.getItem('csx-lang');if(l&&l
     <div class="container">
       <div class="dl__panel">
         <div class="gfield" aria-hidden="true"></div>
-        <h2 id="h-dl">${esc(T.dl_h)}</h2>
-        <p>${esc(T.dl_p)}</p>
-        <div class="dl__act"><img src="${up}static/logo.svg" alt="" width="88" height="88">${playKey()}</div>
+        <h2 id="h-dl">${esc(T.soon_h)}</h2>
+        <p>${esc(T.soon_p)}</p>
+        <div class="dl__act"><img src="${up}static/logo.svg" alt="" width="88" height="88">
+          <form class="soon__form soon__form--inline" action="https://formspree.io/f/xvgrzojn" method="POST" novalidate>
+            <input type="email" name="email" required placeholder="your@email.com" autocomplete="email">
+            <button type="submit" class="key key--primary">${esc(T.soon_btn)}</button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -414,8 +419,7 @@ ${code === DEFAULT ? `<script>try{var l=localStorage.getItem('csx-lang');if(l&&l
     </div>
     <div class="foot__row">
       <span>© 2026 Calc SmartX</span>
-      <span>Android ${VERSION}</span>
-      <a href="${play}" rel="noopener">Google Play</a>
+      <span>Android</span>
     </div>
   </div>
 </footer>
