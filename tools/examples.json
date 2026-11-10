@@ -1,0 +1,14 @@
+{
+  "vi": {"price": 1250000, "qty": 3, "vat": 10, "parts": 2, "fee": 500000, "cur": "₫"},
+  "en": {"price": 1250, "qty": 3, "vat": 20, "parts": 2, "fee": 150, "cur": "£"},
+  "zh": {"price": 2800, "qty": 3, "vat": 13, "parts": 3, "fee": 300, "cur": "¥"},
+  "ja": {"price": 12800, "qty": 3, "vat": 10, "parts": 2, "fee": 5000, "cur": "¥"},
+  "ko": {"price": 150000, "qty": 3, "vat": 10, "parts": 3, "fee": 50000, "cur": "₩"},
+  "es": {"price": 1250, "qty": 3, "vat": 21, "parts": 2, "fee": 150, "cur": "€"},
+  "pt": {"price": 1890, "qty": 3, "vat": 10, "parts": 6, "fee": 200, "cur": "R$"},
+  "fr": {"price": 1250, "qty": 3, "vat": 20, "parts": 2, "fee": 150, "cur": "€"},
+  "de": {"price": 1250, "qty": 3, "vat": 19, "parts": 2, "fee": 150, "cur": "€"},
+  "ru": {"price": 45000, "qty": 3, "vat": 22, "parts": 3, "fee": 5000, "cur": "₽"},
+  "th": {"price": 12900, "qty": 3, "vat": 7, "parts": 2, "fee": 1500, "cur": "฿"},
+  "id": {"price": 1250000, "qty": 3, "vat": 11, "parts": 2, "fee": 250000, "cur": "Rp"}
+}
